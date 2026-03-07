@@ -191,7 +191,7 @@
   /* VALUE */
   .value { background: var(--light); }
   .value-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
     margin-top: 56px;
   }
   @media (max-width: 768px) { .value-grid { grid-template-columns: 1fr; } }
@@ -200,8 +200,15 @@
     border-radius: 12px; padding: 40px 32px;
     border-top: 3px solid var(--accent);
   }
+  .value-card-label {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px; display: block;
+  }
   .value-card h3 {
-    font-size: 18px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.01em;
+    font-size: 22px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.01em;
+  }
+  .value-card h4 {
+    font-size: 15px; font-weight: 700; margin-bottom: 16px; color: var(--black);
   }
   .value-card p { font-size: 14px; color: var(--gray); line-height: 1.8; }
 
@@ -419,16 +426,28 @@
     <h2 class="section-title">私たちの行動指針</h2>
     <div class="value-grid">
       <div class="value-card">
-        <h3>Be Study+ist</h3>
-        <p>学び続け、好奇心を持って挑戦をアップデート</p>
+        <span class="value-card-label">行動指針 / Value</span>
+        <h3>With the customer</h3>
+        <h4>顧客に飛び込もう</h4>
+        <p>お客様とともに成功に向かえるよう、積極的に踏み込んでみる。前に進むことで初めて見えることもあるのだから、お客様へ飛び込もう。</p>
       </div>
       <div class="value-card">
-        <h3>オープンマインドに高めあう</h3>
-        <p>多様な価値観を受け入れ、互いに刺激し合う</p>
+        <span class="value-card-label">行動指針 / Value</span>
+        <h3>Try first</h3>
+        <h4>悩むなら、やってみよう</h4>
+        <p>悩みすぎて何もしないことを選択するよりは、まずは一歩前に踏み出してみる。一度でうまくいかなくても、そこから学べばいいのだから、まずはやってみよう。</p>
       </div>
       <div class="value-card">
-        <h3>思いやりの心を持つ</h3>
-        <p>相手を思いやり、調和を重視した行動</p>
+        <span class="value-card-label">行動指針 / Value</span>
+        <h3>Beyond team</h3>
+        <h4>チームの枠を越えよう</h4>
+        <p>所属組織の垣根を越えて、All Studistで協働する。より大きな成果、新しい価値を生み出すために、チームの枠を越えよう。</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card-label">行動指針 / Value</span>
+        <h3>Be Study + ist</h3>
+        <h4>学び、成長し続けよう</h4>
+        <p>プロフェッショナルであるために、1人ひとりが"Study + ist"として学び続ける。お互いに良い刺激を与え、成長し続けよう。</p>
       </div>
     </div>
   </div>
