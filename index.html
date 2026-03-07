@@ -188,8 +188,25 @@
     letter-spacing: -0.03em; opacity: 0.6;
   }
 
+  /* VALUE */
+  .value { background: var(--light); }
+  .value-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    margin-top: 56px;
+  }
+  @media (max-width: 768px) { .value-grid { grid-template-columns: 1fr; } }
+  .value-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 40px 32px;
+    border-top: 3px solid var(--accent);
+  }
+  .value-card h3 {
+    font-size: 18px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.01em;
+  }
+  .value-card p { font-size: 14px; color: var(--gray); line-height: 1.8; }
+
   /* CONTACT */
-  .contact { text-align: center; background: var(--light); }
+  .contact { text-align: center; background: #fff; }
   .contact .section-title { margin-bottom: 12px; }
   .contact .section-sub { margin: 0 auto 40px; }
   .contact-cards {
@@ -248,28 +265,28 @@
   <div class="section-inner">
     <div class="section-label">About / 私たちについて</div>
     <h2 class="section-title">スタディストグループの<br>グローバル展開</h2>
-    <p class="section-sub">スタディストはタイ・ベトナムに現地法人を展開し、ASEANにおけるオペレーションを効率化するための手段を提供し、現地企業の「現場力と生産性」の向上を支援しています。</p>
+    <p class="section-sub">株式会社スタディストは、2010年3月に設立。ミッション「オペレーションから、働き方と未来を変えていく」、ビジョン「知的活力みなぎる社会をつくる」のもと、主力製品Teachme Bizは国内外2,200社以上に導入され、動画マニュアル作成支援ツール市場シェアNo.1を獲得しています。</p>
     <div class="about-grid">
       <div class="about-text">
         <h3>日本発、ASEANへ。</h3>
-        <p>2010年に日本で創業した株式会社スタディストは、クラウド型マニュアル作成・共有サービス「Teachme Biz」を軸に事業を展開。高い人材流動性・多言語環境・ペーパーレス化のニーズが高まるASEANにおいて、タイおよびベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。</p>
+        <p>ASEANの高い人材流動性・多言語環境・ペーパーレス化ニーズに着目。タイ・ベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。</p>
       </div>
       <div class="about-stats">
         <div class="stat">
-          <div class="stat-num">2+</div>
-          <div class="stat-label">ASEAN 現地法人<br>ASEAN Subsidiaries</div>
+          <div class="stat-num">8年</div>
+          <div class="stat-label">海外拠点設立<br>タイ 2018年〜</div>
         </div>
         <div class="stat">
-          <div class="stat-num">3</div>
-          <div class="stat-label">対応言語（日・英・タイ）<br>Languages</div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">対応言語<br>日・英・タイ・越</div>
         </div>
         <div class="stat">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">対応業種<br>Industries</div>
+          <div class="stat-num">2,200+</div>
+          <div class="stat-label">導入企業数<br>Customers</div>
         </div>
         <div class="stat">
-          <div class="stat-num">SaaS</div>
-          <div class="stat-label">クラウド型サービス<br>Cloud Platform</div>
+          <div class="stat-num">No.1</div>
+          <div class="stat-label">動画マニュアル市場<br>シェア</div>
         </div>
       </div>
     </div>
@@ -390,6 +407,28 @@
       </div>
       <div class="product-visual">
         <div class="product-visual-text">TB</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE -->
+<section class="value" id="value">
+  <div class="section-inner">
+    <div class="section-label">Value / コアバリュー</div>
+    <h2 class="section-title">私たちの行動指針</h2>
+    <div class="value-grid">
+      <div class="value-card">
+        <h3>Be Study+ist</h3>
+        <p>学び続け、好奇心を持って挑戦をアップデート</p>
+      </div>
+      <div class="value-card">
+        <h3>オープンマインドに高めあう</h3>
+        <p>多様な価値観を受け入れ、互いに刺激し合う</p>
+      </div>
+      <div class="value-card">
+        <h3>思いやりの心を持つ</h3>
+        <p>相手を思いやり、調和を重視した行動</p>
       </div>
     </div>
   </div>
