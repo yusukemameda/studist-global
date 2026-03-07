@@ -11,7 +11,7 @@
     --gray: #666;
     --light: #f5f5f5;
     --border: #e0e0e0;
-    --accent: #1a56db;
+    --accent: #0341B8;
   }
   body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif;
@@ -87,6 +87,7 @@
 
   /* ABOUT */
   .about { background: var(--light); }
+  #subsidiaries { background: var(--light); }
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
     margin-top: 56px; align-items: start;
@@ -105,6 +106,28 @@
     color: var(--accent); line-height: 1;
   }
   .stat-label { font-size: 12px; color: var(--gray); margin-top: 6px; }
+
+  /* MISSION VISION */
+  .mv { background: #fff; }
+  .mv-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    margin-top: 56px;
+  }
+  .mv-block { border-left: 3px solid var(--accent); padding-left: 28px; }
+  .mv-block h3 {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 20px;
+  }
+  .mv-block p {
+    font-size: 22px; font-weight: 700; line-height: 1.5;
+    color: var(--black); margin-bottom: 16px; letter-spacing: -0.01em;
+  }
+  .mv-block small {
+    font-size: 13px; color: var(--gray); line-height: 1.8; display: block;
+  }
+  @media (max-width: 768px) {
+    .mv-grid { grid-template-columns: 1fr; }
+  }
 
   /* SUBSIDIARIES */
   .sub-grid {
@@ -132,7 +155,7 @@
   }
 
   /* PRODUCT */
-  .product { background: var(--light); }
+  .product { background: #fff; }
   .product-card {
     background: #fff; border: 1px solid var(--border);
     border-radius: 12px; padding: 48px;
@@ -161,7 +184,7 @@
   }
 
   /* CONTACT */
-  .contact { text-align: center; }
+  .contact { text-align: center; background: var(--light); }
   .contact .section-title { margin-bottom: 12px; }
   .contact .section-sub { margin: 0 auto 40px; }
   .contact-cards {
@@ -251,6 +274,26 @@
   </div>
 </section>
 
+<!-- MISSION / VISION -->
+<section class="mv">
+  <div class="section-inner">
+    <div class="section-label">Mission &amp; Vision</div>
+    <h2 class="section-title">私たちの使命と展望</h2>
+    <div class="mv-grid">
+      <div class="mv-block">
+        <h3>Mission</h3>
+        <p>Transforming the Future of Work Through Operations</p>
+        <small>Japan achieved remarkable economic growth during the Showa era, often referred to as the "Asian Miracle," driven by its population bonus. The corporate rules, business processes, procedures, and systems developed during that time functioned effectively within the social environment of the era.<br><br>However, as the population bonus era has come to an end and labor shortages intensify, we must now update the systems of society that were built on the assumption of continuous population growth.<br><br>At Studist, we focus on operations—the operating system of organizational management. By promoting visualization, standardization, simplification, and systemization (thorough implementation) of business activities, we work to modernize operations.<br><br>Our mission is to transform the way people work, enabling both companies and their employees to grow together, and to help create a society where innovation continues to thrive.</small>
+      </div>
+      <div class="mv-block">
+        <h3>Vision</h3>
+        <p>To build a society that is filled with knowledge power driven by the true understanding and creative thinking.</p>
+        <small>If communication became simpler, both the sender and receiver of the message will no longer have to waste time on unnecessary things but can spend more time on creative things instead.<br><br>This will allow the society to be built with knowledge power-driven by the true understanding and creative thinking. And that is truly Studist's vision.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SUBSIDIARIES -->
 <section id="subsidiaries">
   <div class="section-inner">
@@ -293,8 +336,8 @@
       <!-- Vietnam -->
       <div class="sub-card">
         <div class="sub-flag">&#127483;&#127475;</div>
-        <div class="sub-name">Studist Vietnam Co., Ltd.</div>
-        <div class="sub-name-ja">スタディスト ベトナム</div>
+        <div class="sub-name">Studist (Vietnam) Co., Ltd.</div>
+        <div class="sub-name-ja">スタディスト（ベトナム）</div>
         <div class="sub-divider"></div>
         <div class="sub-info">
           <div class="sub-info-row">
@@ -356,30 +399,13 @@
     <div class="section-label">Contact / お問い合わせ</div>
     <h2 class="section-title">お気軽にご連絡ください</h2>
     <p class="section-sub">Teachme Biz の導入・デモのご依頼、パートナーシップのご相談など、各拠点までお問い合わせください。</p>
-    <div class="contact-cards">
-      <div class="contact-card">
-        <div class="contact-card-flag">&#127471;&#127477;</div>
-        <div class="contact-card-name">株式会社スタディスト（本社）</div>
-        <div class="contact-card-email">studist.co.jp</div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-flag">&#127481;&#127469;</div>
-        <div class="contact-card-name">Studist (Thailand)</div>
-        <div class="contact-card-email">Bangkok, Thailand</div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-flag">&#127483;&#127475;</div>
-        <div class="contact-card-name">Studist Vietnam</div>
-        <div class="contact-card-email">Vietnam</div>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div>&copy; 2026 Studist Corporation. All rights reserved.</div>
-  <div>Studist (Thailand) Co., Ltd. &nbsp;|&nbsp; Studist Vietnam Co., Ltd.</div>
+  <div>Studist (Thailand) Co., Ltd. &nbsp;|&nbsp; Studist (Vietnam) Co., Ltd.</div>
 </footer>
 
 </body>
