@@ -88,11 +88,10 @@
     font-size: clamp(28px, 4vw, 42px); font-weight: 800;
     letter-spacing: -0.02em; margin-bottom: 16px;
   }
-  .section-sub { font-size: 15px; color: var(--gray); max-width: 560px; }
+  .section-sub { font-size: 15px; color: var(--gray); max-width: 100%; }
 
   /* ABOUT */
   .about { background: var(--light); }
-  .about .section-sub { max-width: 100%; }
   #subsidiaries { background: var(--light); }
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
@@ -203,8 +202,8 @@
   .value-card {
     background: #fff; border: 1px solid var(--border);
     border-radius: 12px; overflow: hidden;
-    display: grid; grid-template-rows: 300px 300px;
-    height: 600px;
+    display: grid; grid-template-rows: 250px 250px;
+    height: 500px;
   }
   .value-card-img-wrap {
     overflow: hidden;
@@ -235,7 +234,17 @@
   /* CONTACT */
   .contact { text-align: center; background: #fff; }
   .contact .section-title { margin-bottom: 12px; }
-  .contact .section-sub { margin: 0 auto 40px; }
+  .contact .section-sub { max-width: 560px; margin: 0 auto 24px; }
+  .contact-emails {
+    display: inline-flex; flex-direction: column; gap: 16px;
+    text-align: left;
+  }
+  .contact-email-row { display: flex; align-items: center; gap: 16px; }
+  .contact-email-label { font-size: 13px; font-weight: 600; min-width: 100px; }
+  .contact-email-addr {
+    font-size: 15px; color: var(--gray);
+    font-family: 'Courier New', monospace; letter-spacing: 0.02em;
+  }
   .contact-cards {
     display: flex; gap: 24px; justify-content: center;
     margin-top: 48px; flex-wrap: wrap;
@@ -292,7 +301,7 @@
   <div class="section-inner">
     <div class="section-label">About / 私たちについて</div>
     <h2 class="section-title">スタディストグループの<br>グローバル展開</h2>
-    <p class="section-sub">株式会社スタディストは、2010年3月に設立。ミッション「オペレーションから、働き方と未来を変えていく」、ビジョン「知的活力みなぎる社会をつくる」のもと、主力製品Teachme Bizは国内外2,200社以上に導入され、動画マニュアル作成支援ツール市場シェアNo.1を獲得しています。</p>
+    <p class="section-sub">株式会社スタディストは、2010年3月に設立。ミッション「オペレーションから、働き方と未来を変えていく」、ビジョン「知的活力みなぎる社会をつくる」のもと、主力製品Teachme Bizは国内外2,300社以上に導入され、動画マニュアル作成支援ツール市場シェアNo.1を獲得しています。</p>
     <div class="about-grid">
       <div class="about-text">
         <h3>日本発、ASEANへ。</h3>
@@ -388,8 +397,8 @@
 <section class="product" id="product">
   <div class="section-inner">
     <div class="section-label">Product / プロダクト</div>
-    <h2 class="section-title">Teachme Biz</h2>
-    <p class="section-sub">現場の「やり方」を、動画・画像・テキストで誰でも簡単に作れるクラウド型マニュアルプラットフォーム。</p>
+    <h2 class="section-title">Teachme シリーズ</h2>
+    <p class="section-sub">現場のために、未来への成長資本を生み出すエンジンを、すべての組織に</p>
     <div class="product-card">
       <div>
         <h3>Teachme Biz</h3>
@@ -403,7 +412,7 @@
         </ul>
       </div>
       <div class="product-visual">
-        <div class="product-visual-text">TB</div>
+        <img src="teachmebiz.webp" alt="Teachme Biz" style="width:100%;height:100%;object-fit:contain;">
       </div>
     </div>
   </div>
@@ -489,6 +498,16 @@
     <div class="section-label">Contact / お問い合わせ</div>
     <h2 class="section-title">お気軽にご連絡ください</h2>
     <p class="section-sub">Teachme Biz の導入・デモのご依頼、パートナーシップのご相談など、各拠点までお問い合わせください。</p>
+    <div class="contact-emails">
+      <div class="contact-email-row">
+        <span class="contact-email-label">🇹🇭 Thailand</span>
+        <span class="contact-email-addr">contact-th[@]studist.co.th</span>
+      </div>
+      <div class="contact-email-row">
+        <span class="contact-email-label">🇻🇳 Vietnam</span>
+        <span class="contact-email-addr">contact-vn[@]studist.jp</span>
+      </div>
+    </div>
   </div>
 </section>
 
