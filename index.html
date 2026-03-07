@@ -38,22 +38,27 @@
 
   /* HERO */
   .hero {
-    min-height: 100vh;
+    aspect-ratio: 16 / 9;
+    position: relative; overflow: hidden;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     text-align: center;
-    padding: 120px 24px 80px;
+    padding: 24px;
     background: #fff;
+    margin-top: 65px;
   }
-  .hero-tag {
-    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 24px;
-    border: 1px solid var(--accent); padding: 4px 14px; border-radius: 20px;
-    display: inline-block;
+  .hero-cover {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+  }
+  .hero-content {
+    position: relative; z-index: 1;
   }
   .hero h1 {
     font-size: clamp(36px, 6vw, 72px);
     font-weight: 800; letter-spacing: -0.02em;
-    line-height: 1.15; margin-bottom: 24px;
+    line-height: 1.15; margin-bottom: 0;
   }
   .hero h1 em { font-style: normal; color: var(--accent); }
   .hero p {
@@ -232,12 +237,9 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-tag">株式会社スタディスト グループ</div>
-  <h1>Expanding<br><em>Knowledge</em><br>Across ASEAN.</h1>
-  <p>スタディストグループは、タイ・ベトナムに現地法人を展開し、<br>ASEANにおけるマニュアル・業務改善文化の普及を推進しています。</p>
-  <div class="hero-cta">
-    <a href="#subsidiaries" class="btn btn-primary">現地法人を見る</a>
-    <a href="#product" class="btn btn-outline">Teachme Biz</a>
+  <img src="cover.png" alt="Studist Global" class="hero-cover">
+  <div class="hero-content">
+    <h1>Expanding<br><em>Lean Operation</em><br>Globally.</h1>
   </div>
 </section>
 
@@ -246,11 +248,11 @@
   <div class="section-inner">
     <div class="section-label">About / 私たちについて</div>
     <h2 class="section-title">スタディストグループの<br>グローバル展開</h2>
-    <p class="section-sub">株式会社スタディストは、業務マニュアル・SOPクラウドサービス「Teachme Biz」を展開。ASEAN地域における製造業・サービス業の現場DXを支援しています。</p>
+    <p class="section-sub">スタディストはタイ・ベトナムに現地法人を展開し、ASEANにおけるオペレーションを効率化するための手段を提供し、現地企業の「現場力と生産性」の向上を支援しています。</p>
     <div class="about-grid">
       <div class="about-text">
         <h3>日本発、ASEANへ。</h3>
-        <p>2013年に日本で創業した株式会社スタディストは、クラウド型マニュアル作成・共有サービス「Teachme Biz」を軸に事業を展開。高い人材流動性・多言語環境・ペーパーレス化のニーズが高まるASEANにおいて、タイおよびベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。</p>
+        <p>2010年に日本で創業した株式会社スタディストは、クラウド型マニュアル作成・共有サービス「Teachme Biz」を軸に事業を展開。高い人材流動性・多言語環境・ペーパーレス化のニーズが高まるASEANにおいて、タイおよびベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。</p>
       </div>
       <div class="about-stats">
         <div class="stat">
@@ -319,7 +321,7 @@
           </div>
           <div class="sub-info-row">
             <span class="sub-info-label">所在地</span>
-            <span class="sub-info-val">バンコク, タイ</span>
+            <span class="sub-info-val">952 Ramaland Building 13 Fl, Rama IV Rd, Suriyawongse, Bang Rak, Bangkok 10500</span>
           </div>
           <div class="sub-info-row">
             <span class="sub-info-label">事業内容</span>
@@ -350,7 +352,7 @@
           </div>
           <div class="sub-info-row">
             <span class="sub-info-label">所在地</span>
-            <span class="sub-info-val">ベトナム</span>
+            <span class="sub-info-val">1st Floor, Lancaster Building, 22 – 22bis Le Thanh Ton Street, Saigon Ward, Ho Chi Minh City, Vietnam</span>
           </div>
           <div class="sub-info-row">
             <span class="sub-info-label">事業内容</span>
