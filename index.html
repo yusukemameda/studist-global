@@ -33,8 +33,19 @@
   }
   .logo { font-size: 18px; font-weight: 700; letter-spacing: 0.04em; }
   .logo span { color: var(--accent); }
+  .nav-right { display: flex; align-items: center; gap: 24px; }
   .nav-links { display: flex; gap: 32px; font-size: 13px; color: var(--gray); }
   .nav-links a:hover { color: var(--black); }
+  .lang-switcher { display: flex; gap: 4px; }
+  .lang-btn {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+    padding: 4px 9px; border-radius: 4px; cursor: pointer;
+    border: 1px solid var(--border); color: var(--gray); background: none;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    font-family: inherit;
+  }
+  .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
   /* HERO */
   .hero {
@@ -183,6 +194,14 @@
   .feature-list li::before {
     content: '✓'; color: var(--accent); font-weight: 700; font-size: 14px;
   }
+  .product-links { display: flex; gap: 12px; margin-top: 24px; }
+  .product-link {
+    display: inline-block; padding: 8px 20px;
+    border: 1.5px solid var(--accent); border-radius: 6px;
+    font-size: 13px; font-weight: 600; color: var(--accent);
+    transition: background 0.2s, color 0.2s;
+  }
+  .product-link:hover { background: var(--accent); color: #fff; }
   .product-visual {
     background: linear-gradient(135deg, #e8efff 0%, #dbeafe 100%);
     border-radius: 8px; height: 240px;
@@ -271,6 +290,7 @@
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
+    .lang-switcher { gap: 3px; }
     .about-grid, .sub-grid, .product-card { grid-template-columns: 1fr; }
     footer { flex-direction: column; text-align: center; }
   }
@@ -281,11 +301,19 @@
 <!-- NAV -->
 <nav>
   <div class="logo">Studist<span>.</span> Global</div>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#subsidiaries">Subsidiaries</a>
-    <a href="#product">Product</a>
-    <a href="#contact">Contact</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#subsidiaries" data-i18n="nav.subsidiaries">Subsidiaries</a>
+      <a href="#product" data-i18n="nav.product">Product</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ja">JA</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="th">TH</button>
+      <button class="lang-btn" data-lang="vi">VI</button>
+    </div>
   </div>
 </nav>
 
@@ -300,30 +328,30 @@
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="section-inner">
-    <div class="section-label">About / 私たちについて</div>
-    <h2 class="section-title">「生産性向上のパートナー」を目指して</h2>
-    <p class="section-sub">私たちは「伝えること」から、企業の業務改革に取り組んできました。 そして今、「リーンオペレーション」という考え方を軸に、より広い視点での改善を提案しています。 非効率な業務から解放され、本来の仕事の面白さを感じられる。 そんな職場が増えていけば、社会全体の知的な活力も高まっていく。 それが、私たちの目指す未来です。</p>
+    <div class="section-label" data-i18n="about.label">About / 私たちについて</div>
+    <h2 class="section-title" data-i18n="about.title">「生産性向上のパートナー」を目指して</h2>
+    <p class="section-sub" data-i18n="about.sub">私たちは「伝えること」から、企業の業務改革に取り組んできました。 そして今、「リーンオペレーション」という考え方を軸に、より広い視点での改善を提案しています。 非効率な業務から解放され、本来の仕事の面白さを感じられる。 そんな職場が増えていけば、社会全体の知的な活力も高まっていく。 それが、私たちの目指す未来です。</p>
     <div class="about-grid">
       <div class="about-text">
-        <h3>日本発、ASEANへ。</h3>
-        <p>ASEANの高い人材流動性・多言語環境・ペーパーレス化ニーズに着目。タイ・ベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。</p>
+        <h3 data-i18n="about.text.h3">日本発、ASEANへ。</h3>
+        <p data-i18n="about.text.p">ASEANの高い人材流動性・多言語環境・ペーパーレス化ニーズに着目。タイ・ベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。</p>
       </div>
       <div class="about-stats">
         <div class="stat">
-          <div class="stat-num">8<span class="stat-unit">年</span></div>
-          <div class="stat-label">海外拠点設立<br>タイ 2018年〜</div>
+          <div class="stat-num" data-i18n="stat.years.num">8<span class="stat-unit">年</span></div>
+          <div class="stat-label" data-i18n="stat.years.label">海外拠点設立<br>タイ 2018年〜</div>
         </div>
         <div class="stat">
           <div class="stat-num">4</div>
-          <div class="stat-label">対応言語<br>日・英・タイ・越</div>
+          <div class="stat-label" data-i18n="stat.languages.label">対応言語<br>日・英・タイ・越</div>
         </div>
         <div class="stat">
           <div class="stat-num">2,300+</div>
-          <div class="stat-label">導入企業数<br>Customers</div>
+          <div class="stat-label" data-i18n="stat.customers.label">導入企業数<br>Customers</div>
         </div>
         <div class="stat">
-          <div class="stat-num">100<span class="stat-unit">社以上</span></div>
-          <div class="stat-label">海外導入企業数</div>
+          <div class="stat-num" data-i18n="stat.overseas.num">100<span class="stat-unit">社以上</span></div>
+          <div class="stat-label" data-i18n="stat.overseas.label">海外導入企業数</div>
         </div>
       </div>
     </div>
@@ -333,20 +361,20 @@
 <!-- MISSION / VISION -->
 <section class="mv">
   <div class="section-inner">
-    <div class="section-label">Mission &amp; Vision</div>
-    <h2 class="section-title">私たちの使命と展望</h2>
+    <div class="section-label" data-i18n="mv.label">Mission &amp; Vision</div>
+    <h2 class="section-title" data-i18n="mv.title">私たちの使命と展望</h2>
     <div class="mv-grid">
       <div class="mv-block">
-        <h3>Mission</h3>
-        <p class="mv-subtitle">私たちの使命</p>
-        <p class="mv-catch">オペレーションから、働き方と未来を変えていく</p>
-        <small>日本は、昭和の人口ボーナス期に「アジアの奇跡」と言われるほどの躍進を遂げました。 その過程で作られていった企業運営のルール、業務プロセス、手順、仕組みも、 当時の社会環境では適切に機能していました。 しかし、人口ボーナス期が終わり、労働力不足が加速していく今、 人口増加を前提にしたあらゆる社会の仕組みをアップデートしていく必要があります。 私たちは、企業運営のOSともいえる「オペレーション」に焦点を当て、 業務の可視化、標準化、単純化、仕組み化（徹底化）を通じて、オペレーションをアップデートしていきます。 働き方を変え、企業と従業員がともに成長し、 イノベーションが生まれ続ける社会の実現のため取り組んでいきます。</small>
+        <h3 data-i18n="mv.mission.h3">Mission</h3>
+        <p class="mv-subtitle" data-i18n="mv.mission.subtitle">私たちの使命</p>
+        <p class="mv-catch" data-i18n="mv.mission.catch">オペレーションから、働き方と未来を変えていく</p>
+        <small data-i18n="mv.mission.body">日本は、昭和の人口ボーナス期に「アジアの奇跡」と言われるほどの躍進を遂げました。 その過程で作られていった企業運営のルール、業務プロセス、手順、仕組みも、 当時の社会環境では適切に機能していました。 しかし、人口ボーナス期が終わり、労働力不足が加速していく今、 人口増加を前提にしたあらゆる社会の仕組みをアップデートしていく必要があります。 私たちは、企業運営のOSともいえる「オペレーション」に焦点を当て、 業務の可視化、標準化、単純化、仕組み化（徹底化）を通じて、オペレーションをアップデートしていきます。 働き方を変え、企業と従業員がともに成長し、 イノベーションが生まれ続ける社会の実現のため取り組んでいきます。</small>
       </div>
       <div class="mv-block">
-        <h3>Vision</h3>
-        <p class="mv-subtitle">私たちが目指す姿</p>
-        <p class="mv-catch">知的活力みなぎる社会をつくる</p>
-        <small>私たちが目指すゴールは、「知的活力みなぎる社会」です。 未来に向けた新しい取り組みや業務、革新的な構想や事業。 これらを実現するためには、創造的な思考が欠かせません。 そして、創造的な思考には時間も、人材も、資金も必要です。 現状の業務に忙殺されている状態では、新しいことに取り組む余力が生まれません。 私たちはオペレーションのロスを減らし、働き方を変えることに貢献し、時間・資金・人材といった資源に余力を生み出します。 余力が生まれることで、未来に向けた活動が次々と実行され、 革新的な構想や魅力的な製品、新しい事業が継続的に生まれていきます。 その積み重ねが企業や社会全体をより活力ある状態へと近づけていきます。 「オペレーションから働き方と未来を変えていく」というミッションのもと、 新たな挑戦や創造が次々と生まれる「知的活力みなぎる社会」を実現します。 これが私たちスタディストのビジョンです。</small>
+        <h3 data-i18n="mv.vision.h3">Vision</h3>
+        <p class="mv-subtitle" data-i18n="mv.vision.subtitle">私たちが目指す姿</p>
+        <p class="mv-catch" data-i18n="mv.vision.catch">知的活力みなぎる社会をつくる</p>
+        <small data-i18n="mv.vision.body">私たちが目指すゴールは、「知的活力みなぎる社会」です。 未来に向けた新しい取り組みや業務、革新的な構想や事業。 これらを実現するためには、創造的な思考が欠かせません。 そして、創造的な思考には時間も、人材も、資金も必要です。 現状の業務に忙殺されている状態では、新しいことに取り組む余力が生まれません。 私たちはオペレーションのロスを減らし、働き方を変えることに貢献し、時間・資金・人材といった資源に余力を生み出します。 余力が生まれることで、未来に向けた活動が次々と実行され、 革新的な構想や魅力的な製品、新しい事業が継続的に生まれていきます。 その積み重ねが企業や社会全体をより活力ある状態へと近づけていきます。 「オペレーションから働き方と未来を変えていく」というミッションのもと、 新たな挑戦や創造が次々と生まれる「知的活力みなぎる社会」を実現します。 これが私たちスタディストのビジョンです。</small>
       </div>
     </div>
   </div>
@@ -355,39 +383,39 @@
 <!-- VALUE -->
 <section class="value" id="value">
   <div class="section-inner">
-    <div class="section-label">Value / コアバリュー</div>
-    <h2 class="section-title">私たちの行動指針</h2>
+    <div class="section-label" data-i18n="value.label">Value / コアバリュー</div>
+    <h2 class="section-title" data-i18n="value.title">私たちの行動指針</h2>
     <div class="value-grid">
       <div class="value-card">
         <div class="value-card-img-wrap"><img src="01_withthecustomer.png" alt="With the customer" class="value-card-img"></div>
         <div class="value-card-body">
           <h3>With the customer</h3>
-          <h4>顧客に飛び込もう</h4>
-          <p>お客様とともに成功に向かえるよう、積極的に踏み込んでみる。前に進むことで初めて見えることもあるのだから、お客様へ飛び込もう。</p>
+          <h4 data-i18n="value1.h4">顧客に飛び込もう</h4>
+          <p data-i18n="value1.p">お客様とともに成功に向かえるよう、積極的に踏み込んでみる。前に進むことで初めて見えることもあるのだから、お客様へ飛び込もう。</p>
         </div>
       </div>
       <div class="value-card">
         <div class="value-card-img-wrap"><img src="02_tryfirst.png" alt="Try first" class="value-card-img"></div>
         <div class="value-card-body">
           <h3>Try first</h3>
-          <h4>悩むなら、やってみよう</h4>
-          <p>悩みすぎて何もしないことを選択するよりは、まずは一歩前に踏み出してみる。一度でうまくいかなくても、そこから学べばいいのだから、まずはやってみよう。</p>
+          <h4 data-i18n="value2.h4">悩むなら、やってみよう</h4>
+          <p data-i18n="value2.p">悩みすぎて何もしないことを選択するよりは、まずは一歩前に踏み出してみる。一度でうまくいかなくても、そこから学べばいいのだから、まずはやってみよう。</p>
         </div>
       </div>
       <div class="value-card">
         <div class="value-card-img-wrap"><img src="03_beyondteam.png" alt="Beyond team" class="value-card-img"></div>
         <div class="value-card-body">
           <h3>Beyond team</h3>
-          <h4>チームの枠を越えよう</h4>
-          <p>所属組織の垣根を越えて、All Studistで協働する。より大きな成果、新しい価値を生み出すために、チームの枠を越えよう。</p>
+          <h4 data-i18n="value3.h4">チームの枠を越えよう</h4>
+          <p data-i18n="value3.p">所属組織の垣根を越えて、All Studistで協働する。より大きな成果、新しい価値を生み出すために、チームの枠を越えよう。</p>
         </div>
       </div>
       <div class="value-card">
         <div class="value-card-img-wrap"><img src="04_bestudyist.png" alt="Be Study + ist" class="value-card-img"></div>
         <div class="value-card-body">
           <h3>Be Study + ist</h3>
-          <h4>学び、成長し続けよう</h4>
-          <p>プロフェッショナルであるために、1人ひとりが"Study + ist"として学び続ける。お互いに良い刺激を与え、成長し続けよう。</p>
+          <h4 data-i18n="value4.h4">学び、成長し続けよう</h4>
+          <p data-i18n="value4.p">プロフェッショナルであるために、1人ひとりが"Study + ist"として学び続ける。お互いに良い刺激を与え、成長し続けよう。</p>
         </div>
       </div>
     </div>
@@ -397,20 +425,24 @@
 <!-- PRODUCT -->
 <section class="product" id="product">
   <div class="section-inner">
-    <div class="section-label">Product / プロダクト</div>
-    <h2 class="section-title">Teachme <span class="title-ja">シリーズ</span></h2>
-    <p class="section-sub">現場のために、未来への成長資本を生み出すエンジンを、すべての組織に</p>
+    <div class="section-label" data-i18n="product.label">Product / プロダクト</div>
+    <h2 class="section-title" data-i18n="product.title">Teachme <span class="title-ja">シリーズ</span></h2>
+    <p class="section-sub" data-i18n="product.sub">現場のために、未来への成長資本を生み出すエンジンを、すべての組織に</p>
     <div class="product-card">
       <div>
         <h3>Teachme Biz</h3>
-        <p>製造・物流・小売・飲食などの現場で活用される業務マニュアル作成・共有プラットフォーム。多言語対応とスマートフォン運用により、海外拠点でも同じ手順・同じ品質のオペレーションを実現します。</p>
+        <p data-i18n="product.desc">製造・物流・小売・飲食などの現場で活用される業務マニュアル作成・共有プラットフォーム。多言語対応とスマートフォン運用により、海外拠点でも同じ手順・同じ品質のオペレーションを実現します。</p>
         <ul class="feature-list">
-          <li>動画・画像ベースで誰でも理解できるSOPを簡単作成</li>
-          <li>多言語対応（日本語・英語・タイ語・ベトナム語 など）で多国籍現場に対応</li>
-          <li>スマートフォンからいつでも閲覧、現場教育を効率化</li>
-          <li>閲覧状況・理解度テスト・レポートで教育状況を可視化</li>
-          <li>タイ・ベトナムの現地語サポートと現地訪問による導入支援</li>
+          <li data-i18n="product.feature1">動画・画像ベースで誰でも理解できるSOPを簡単作成</li>
+          <li data-i18n="product.feature2">多言語対応（日本語・英語・タイ語・ベトナム語 など）で多国籍現場に対応</li>
+          <li data-i18n="product.feature3">スマートフォンからいつでも閲覧、現場教育を効率化</li>
+          <li data-i18n="product.feature4">閲覧状況・理解度テスト・レポートで教育状況を可視化</li>
+          <li data-i18n="product.feature5">タイ・ベトナムの現地語サポートと現地訪問による導入支援</li>
         </ul>
+        <div class="product-links">
+          <a href="https://biz.teachme.jp/" target="_blank" rel="noopener" class="product-link" data-i18n="product.link.jp">日本サイト</a>
+          <a href="https://teachme-biz.com/ja/" target="_blank" rel="noopener" class="product-link" data-i18n="product.link.global">海外サイト</a>
+        </div>
       </div>
       <div class="product-visual">
         <img src="teachmebiz.webp" alt="Teachme Biz" style="width:100%;height:100%;object-fit:contain;">
@@ -422,37 +454,37 @@
 <!-- SUBSIDIARIES -->
 <section id="subsidiaries">
   <div class="section-inner">
-    <div class="section-label">Subsidiaries / 現地法人</div>
-    <h2 class="section-title">ASEAN 2<span class="title-ja">拠点</span></h2>
-    <p class="section-sub">タイ・ベトナムにて、日系企業をはじめとする現地企業の業務標準化・人材育成を支援しています。</p>
+    <div class="section-label" data-i18n="subs.label">Subsidiaries / 現地法人</div>
+    <h2 class="section-title" data-i18n="subs.title">ASEAN 2<span class="title-ja">拠点</span></h2>
+    <p class="section-sub" data-i18n="subs.sub">タイ・ベトナムにて、日系企業をはじめとする現地企業の業務標準化・人材育成を支援しています。</p>
     <div class="sub-grid">
 
       <!-- Thailand -->
       <div class="sub-card">
         <div class="sub-flag">&#127481;&#127469;</div>
         <div class="sub-name">Studist (Thailand) Co., Ltd.</div>
-        <div class="sub-name-ja">スタディスト（タイランド）</div>
+        <div class="sub-name-ja" data-i18n="th.name.ja">スタディスト（タイランド）</div>
         <div class="sub-divider"></div>
         <div class="sub-info">
           <div class="sub-info-row">
-            <span class="sub-info-label">設立</span>
-            <span class="sub-info-val">2018年8月</span>
+            <span class="sub-info-label" data-i18n="label.founded">設立</span>
+            <span class="sub-info-val" data-i18n="th.founded">2018年8月</span>
           </div>
           <div class="sub-info-row">
-            <span class="sub-info-label">代表</span>
+            <span class="sub-info-label" data-i18n="label.ceo">代表</span>
             <span class="sub-info-val">Yusuke Mameda</span>
           </div>
           <div class="sub-info-row">
-            <span class="sub-info-label">所在地</span>
+            <span class="sub-info-label" data-i18n="label.address">所在地</span>
             <span class="sub-info-val">952 Ramaland Building 13 Fl, Rama IV Rd, Suriyawongse, Bang Rak, Bangkok 10500</span>
           </div>
           <div class="sub-info-row">
-            <span class="sub-info-label">事業内容</span>
-            <span class="sub-info-val">Teachme Biz 販売・サポート</span>
+            <span class="sub-info-label" data-i18n="label.business">事業内容</span>
+            <span class="sub-info-val" data-i18n="th.business">Teachme Biz 販売・サポート</span>
           </div>
           <div class="sub-info-row">
-            <span class="sub-info-label">対象市場</span>
-            <span class="sub-info-val">タイ・日本国外</span>
+            <span class="sub-info-label" data-i18n="label.market">対象市場</span>
+            <span class="sub-info-val" data-i18n="th.market">タイ・日本国外</span>
           </div>
         </div>
         <span class="sub-tag">Thailand</span>
@@ -462,28 +494,28 @@
       <div class="sub-card">
         <div class="sub-flag">&#127483;&#127475;</div>
         <div class="sub-name">Studist (Vietnam) Co., Ltd.</div>
-        <div class="sub-name-ja">スタディスト（ベトナム）</div>
+        <div class="sub-name-ja" data-i18n="vn.name.ja">スタディスト（ベトナム）</div>
         <div class="sub-divider"></div>
         <div class="sub-info">
           <div class="sub-info-row">
-            <span class="sub-info-label">設立</span>
-            <span class="sub-info-val">2025年12月</span>
+            <span class="sub-info-label" data-i18n="label.founded">設立</span>
+            <span class="sub-info-val" data-i18n="vn.founded">2025年12月</span>
           </div>
           <div class="sub-info-row">
-            <span class="sub-info-label">代表</span>
+            <span class="sub-info-label" data-i18n="label.ceo">代表</span>
             <span class="sub-info-val">Yasuaki Tsukahara</span>
           </div>
           <div class="sub-info-row">
-            <span class="sub-info-label">所在地</span>
+            <span class="sub-info-label" data-i18n="label.address">所在地</span>
             <span class="sub-info-val">1st Floor, Lancaster Building, 22 – 22bis Le Thanh Ton Street, Saigon Ward, Ho Chi Minh City, Vietnam</span>
           </div>
           <div class="sub-info-row">
-            <span class="sub-info-label">事業内容</span>
-            <span class="sub-info-val">Teachme Biz 販売・サポート</span>
+            <span class="sub-info-label" data-i18n="label.business">事業内容</span>
+            <span class="sub-info-val" data-i18n="vn.business">Teachme Biz 販売・サポート</span>
           </div>
           <div class="sub-info-row">
-            <span class="sub-info-label">対象市場</span>
-            <span class="sub-info-val">ベトナム全域</span>
+            <span class="sub-info-label" data-i18n="label.market">対象市場</span>
+            <span class="sub-info-val" data-i18n="vn.market">ベトナム全域</span>
           </div>
         </div>
         <span class="sub-tag">Vietnam</span>
@@ -496,9 +528,9 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="section-inner">
-    <div class="section-label">Contact / お問い合わせ</div>
-    <h2 class="section-title">お気軽にご連絡ください</h2>
-    <p class="section-sub">Teachme Biz の導入・デモのご依頼、パートナーシップのご相談など、各拠点までお問い合わせください。</p>
+    <div class="section-label" data-i18n="contact.label">Contact / お問い合わせ</div>
+    <h2 class="section-title" data-i18n="contact.title">お気軽にご連絡ください</h2>
+    <p class="section-sub" data-i18n="contact.sub">Teachme Biz の導入・デモのご依頼、パートナーシップのご相談など、各拠点までお問い合わせください。</p>
     <div class="contact-emails">
       <div class="contact-email-row">
         <span class="contact-email-label">🇹🇭 Thailand</span>
@@ -518,5 +550,194 @@
   <div>Studist (Thailand) Co., Ltd. &nbsp;|&nbsp; Studist (Vietnam) Co., Ltd.</div>
 </footer>
 
+<script>
+const translations = {
+  ja: {
+    'page.title': 'Studist Global | グローバル展開',
+    'nav.about': 'About', 'nav.subsidiaries': 'Subsidiaries', 'nav.product': 'Product', 'nav.contact': 'Contact',
+    'about.label': 'About / 私たちについて',
+    'about.title': '「生産性向上のパートナー」を目指して',
+    'about.sub': '私たちは「伝えること」から、企業の業務改革に取り組んできました。そして今、「リーンオペレーション」という考え方を軸に、より広い視点での改善を提案しています。非効率な業務から解放され、本来の仕事の面白さを感じられる。そんな職場が増えていけば、社会全体の知的な活力も高まっていく。それが、私たちの目指す未来です。',
+    'about.text.h3': '日本発、ASEANへ。',
+    'about.text.p': 'ASEANの高い人材流動性・多言語環境・ペーパーレス化ニーズに着目。タイ・ベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。',
+    'stat.years.num': '8<span class="stat-unit">年</span>', 'stat.years.label': '海外拠点設立<br>タイ 2018年〜',
+    'stat.languages.label': '対応言語<br>日・英・タイ・越',
+    'stat.customers.label': '導入企業数<br>Customers',
+    'stat.overseas.num': '100<span class="stat-unit">社以上</span>', 'stat.overseas.label': '海外導入企業数',
+    'mv.label': 'Mission &amp; Vision', 'mv.title': '私たちの使命と展望',
+    'mv.mission.h3': 'Mission', 'mv.mission.subtitle': '私たちの使命',
+    'mv.mission.catch': 'オペレーションから、働き方と未来を変えていく',
+    'mv.mission.body': '日本は、昭和の人口ボーナス期に「アジアの奇跡」と言われるほどの躍進を遂げました。その過程で作られていった企業運営のルール、業務プロセス、手順、仕組みも、当時の社会環境では適切に機能していました。しかし、人口ボーナス期が終わり、労働力不足が加速していく今、人口増加を前提にしたあらゆる社会の仕組みをアップデートしていく必要があります。私たちは、企業運営のOSともいえる「オペレーション」に焦点を当て、業務の可視化、標準化、単純化、仕組み化（徹底化）を通じて、オペレーションをアップデートしていきます。働き方を変え、企業と従業員がともに成長し、イノベーションが生まれ続ける社会の実現のため取り組んでいきます。',
+    'mv.vision.h3': 'Vision', 'mv.vision.subtitle': '私たちが目指す姿',
+    'mv.vision.catch': '知的活力みなぎる社会をつくる',
+    'mv.vision.body': '私たちが目指すゴールは、「知的活力みなぎる社会」です。未来に向けた新しい取り組みや業務、革新的な構想や事業。これらを実現するためには、創造的な思考が欠かせません。そして、創造的な思考には時間も、人材も、資金も必要です。現状の業務に忙殺されている状態では、新しいことに取り組む余力が生まれません。私たちはオペレーションのロスを減らし、働き方を変えることに貢献し、時間・資金・人材といった資源に余力を生み出します。余力が生まれることで、未来に向けた活動が次々と実行され、革新的な構想や魅力的な製品、新しい事業が継続的に生まれていきます。その積み重ねが企業や社会全体をより活力ある状態へと近づけていきます。これが私たちスタディストのビジョンです。',
+    'value.label': 'Value / コアバリュー', 'value.title': '私たちの行動指針',
+    'value1.h4': '顧客に飛び込もう', 'value1.p': 'お客様とともに成功に向かえるよう、積極的に踏み込んでみる。前に進むことで初めて見えることもあるのだから、お客様へ飛び込もう。',
+    'value2.h4': '悩むなら、やってみよう', 'value2.p': '悩みすぎて何もしないことを選択するよりは、まずは一歩前に踏み出してみる。一度でうまくいかなくても、そこから学べばいいのだから、まずはやってみよう。',
+    'value3.h4': 'チームの枠を越えよう', 'value3.p': '所属組織の垣根を越えて、All Studistで協働する。より大きな成果、新しい価値を生み出すために、チームの枠を越えよう。',
+    'value4.h4': '学び、成長し続けよう', 'value4.p': 'プロフェッショナルであるために、1人ひとりが"Study + ist"として学び続ける。お互いに良い刺激を与え、成長し続けよう。',
+    'product.label': 'Product / プロダクト', 'product.title': 'Teachme <span class="title-ja">シリーズ</span>',
+    'product.sub': '現場のために、未来への成長資本を生み出すエンジンを、すべての組織に',
+    'product.desc': '製造・物流・小売・飲食などの現場で活用される業務マニュアル作成・共有プラットフォーム。多言語対応とスマートフォン運用により、海外拠点でも同じ手順・同じ品質のオペレーションを実現します。',
+    'product.feature1': '動画・画像ベースで誰でも理解できるSOPを簡単作成',
+    'product.feature2': '多言語対応（日本語・英語・タイ語・ベトナム語 など）で多国籍現場に対応',
+    'product.feature3': 'スマートフォンからいつでも閲覧、現場教育を効率化',
+    'product.feature4': '閲覧状況・理解度テスト・レポートで教育状況を可視化',
+    'product.feature5': 'タイ・ベトナムの現地語サポートと現地訪問による導入支援',
+    'product.link.jp': '日本サイト', 'product.link.global': '海外サイト',
+    'subs.label': 'Subsidiaries / 現地法人', 'subs.title': 'ASEAN 2<span class="title-ja">拠点</span>',
+    'subs.sub': 'タイ・ベトナムにて、日系企業をはじめとする現地企業の業務標準化・人材育成を支援しています。',
+    'label.founded': '設立', 'label.ceo': '代表', 'label.address': '所在地', 'label.business': '事業内容', 'label.market': '対象市場',
+    'th.name.ja': 'スタディスト（タイランド）', 'th.founded': '2018年8月', 'th.business': 'Teachme Biz 販売・サポート', 'th.market': 'タイ・日本国外',
+    'vn.name.ja': 'スタディスト（ベトナム）', 'vn.founded': '2025年12月', 'vn.business': 'Teachme Biz 販売・サポート', 'vn.market': 'ベトナム全域',
+    'contact.label': 'Contact / お問い合わせ', 'contact.title': 'お気軽にご連絡ください',
+    'contact.sub': 'Teachme Biz の導入・デモのご依頼、パートナーシップのご相談など、各拠点までお問い合わせください。'
+  },
+  en: {
+    'page.title': 'Studist Global | Global Expansion',
+    'nav.about': 'About', 'nav.subsidiaries': 'Subsidiaries', 'nav.product': 'Product', 'nav.contact': 'Contact',
+    'about.label': 'About / About Us',
+    'about.title': 'Striving to Be Your "Productivity Partner"',
+    'about.sub': 'We started from "communication" and have been driving business transformation for companies. Now, centered around the concept of "Lean Operation," we propose improvements from a broader perspective. Freed from inefficient work, people can rediscover the real joy of their jobs. As more such workplaces emerge, the intellectual vitality of society as a whole will grow. That is the future we strive for.',
+    'about.text.h3': 'From Japan to ASEAN.',
+    'about.text.p': 'Focusing on ASEAN\'s high labor mobility, multilingual environment, and need for paperless solutions, we established local subsidiaries in Thailand and Vietnam, providing locally rooted support.',
+    'stat.years.num': '8', 'stat.years.label': 'Years of overseas presence<br>Thailand since 2018',
+    'stat.languages.label': 'Supported languages<br>JA / EN / TH / VI',
+    'stat.customers.label': 'Companies introduced<br>Customers',
+    'stat.overseas.num': '100+', 'stat.overseas.label': 'Overseas companies introduced',
+    'mv.label': 'Mission &amp; Vision', 'mv.title': 'Our Mission and Vision',
+    'mv.mission.h3': 'Mission', 'mv.mission.subtitle': 'Our mission',
+    'mv.mission.catch': 'Transforming the Future of Work Through Operations',
+    'mv.mission.body': 'Japan achieved remarkable economic growth during the Showa era, often referred to as the "Asian Miracle," driven by its population bonus.<br>The corporate rules, business processes, procedures, and systems developed during that time functioned effectively within the social environment of the era.<br>However, as the population bonus era has come to an end and labor shortages intensify, we must now update the systems of society that were built on the assumption of continuous population growth.<br>At Studist, we focus on operations—the operating system of organizational management.<br>By promoting visualization, standardization, simplification, and systemization (thorough implementation) of business activities, we work to modernize operations.<br>Our mission is to transform the way people work, enabling both companies and their employees to grow together, and to help create a society where innovation continues to thrive.',
+    'mv.vision.h3': 'Vision', 'mv.vision.subtitle': 'The future we aim for',
+    'mv.vision.catch': 'To build a society that is filled with knowledge power driven by the true understanding and creative thinking.',
+    'mv.vision.body': 'If communication became simpler, both the sender and receiver of the message will no longer have to waste time on unnecessary things but can spend more time on creative things instead.<br>This will allow the society to be built with knowledge power-driven by the true understanding and creative thinking. And that is truly Studist\'s vision.',
+    'value.label': 'Value / Core Values', 'value.title': 'Our Core Values',
+    'value1.h4': 'Dive into your customers', 'value1.p': 'Actively engage with customers so we can succeed together. Dive in — because sometimes you only see what\'s possible once you take that step forward.',
+    'value2.h4': 'If you\'re unsure, just try', 'value2.p': 'Rather than being paralyzed by overthinking, take a step forward first. Even if it doesn\'t work out the first time, you can learn from it — so just give it a try.',
+    'value3.h4': 'Go beyond your team', 'value3.p': 'Collaborate across organizational boundaries as All Studist. Go beyond your team to create greater results and new value.',
+    'value4.h4': 'Keep learning and growing', 'value4.p': 'To be a professional, each of us continues to learn as a "Study + ist." Let\'s inspire each other and keep growing.',
+    'product.label': 'Product / Products', 'product.title': 'Teachme <span class="title-ja">Series</span>',
+    'product.sub': 'Creating engines of growth capital for the future, for every organization on the front lines',
+    'product.desc': 'A business manual creation and sharing platform used in manufacturing, logistics, retail, food service, and other front-line operations. With multilingual support and smartphone-based use, it enables consistent procedures and quality at overseas locations.',
+    'product.feature1': 'Easily create SOPs anyone can understand with video and image-based content',
+    'product.feature2': 'Multilingual support (Japanese, English, Thai, Vietnamese, etc.) for multicultural workplaces',
+    'product.feature3': 'Access anytime from smartphones, streamlining on-site training',
+    'product.feature4': 'Visualize training status with viewing logs, comprehension tests, and reports',
+    'product.feature5': 'Local language support in Thailand & Vietnam with on-site implementation assistance',
+    'product.link.jp': 'Japan Site', 'product.link.global': 'Global Site',
+    'subs.label': 'Subsidiaries / Local Offices', 'subs.title': 'ASEAN 2 <span class="title-ja">Locations</span>',
+    'subs.sub': 'We support business standardization and human resource development for Japanese and local companies in Thailand and Vietnam.',
+    'label.founded': 'Founded', 'label.ceo': 'CEO', 'label.address': 'Address', 'label.business': 'Business', 'label.market': 'Market',
+    'th.name.ja': 'Studist (Thailand)', 'th.founded': 'August 2018', 'th.business': 'Teachme Biz Sales & Support', 'th.market': 'Thailand & Overseas',
+    'vn.name.ja': 'Studist (Vietnam)', 'vn.founded': 'December 2025', 'vn.business': 'Teachme Biz Sales & Support', 'vn.market': 'All of Vietnam',
+    'contact.label': 'Contact / Inquiries', 'contact.title': 'Feel Free to Reach Out',
+    'contact.sub': 'For Teachme Biz implementation, demo requests, partnership inquiries, and more, please contact your nearest office.'
+  },
+  th: {
+    'page.title': 'Studist Global | การขยายตัวทั่วโลก',
+    'nav.about': 'เกี่ยวกับเรา', 'nav.subsidiaries': 'สาขา', 'nav.product': 'ผลิตภัณฑ์', 'nav.contact': 'ติดต่อ',
+    'about.label': 'About / เกี่ยวกับเรา',
+    'about.title': 'มุ่งสู่การเป็น "พาร์ทเนอร์ด้านผลิตภาพ"',
+    'about.sub': 'เราเริ่มต้นจากการ "สื่อสาร" และมุ่งมั่นสู่การเปลี่ยนแปลงกระบวนการทำงานขององค์กร ปัจจุบัน เราเสนอการปรับปรุงในมุมมองที่กว้างขึ้น โดยยึดแนวคิด "Lean Operation" เป็นแกนหลัก หลุดพ้นจากงานที่ไร้ประสิทธิภาพ แล้วค้นพบความสนุกแท้จริงของการทำงาน เมื่อสภาพแวดล้อมการทำงานเช่นนี้แพร่หลาย ความมีชีวิตชีวาทางปัญญาของสังคมโดยรวมก็จะเติบโตขึ้น นั่นคืออนาคตที่เรามุ่งสู่',
+    'about.text.h3': 'จากญี่ปุ่นสู่อาเซียน',
+    'about.text.p': 'โดยมุ่งเน้นไปที่การเคลื่อนย้ายแรงงานสูง สภาพแวดล้อมหลายภาษา และความต้องการ paperless ของ ASEAN เราได้จัดตั้งบริษัทในเครือในไทยและเวียดนาม เพื่อให้การสนับสนุนที่ฝังรากในท้องถิ่น',
+    'stat.years.num': '8', 'stat.years.label': 'ปีที่มีสำนักงานต่างประเทศ<br>ประเทศไทยตั้งแต่ปี 2018',
+    'stat.languages.label': 'ภาษาที่รองรับ<br>JA / EN / TH / VI',
+    'stat.customers.label': 'จำนวนบริษัทที่ใช้งาน<br>Customers',
+    'stat.overseas.num': '100+', 'stat.overseas.label': 'บริษัทต่างประเทศที่ใช้งาน',
+    'mv.label': 'Mission &amp; Vision', 'mv.title': 'พันธกิจและวิสัยทัศน์ของเรา',
+    'mv.mission.h3': 'Mission', 'mv.mission.subtitle': 'พันธกิจของเรา',
+    'mv.mission.catch': 'เปลี่ยนแปลงวิธีการทำงานและอนาคตผ่านการปฏิบัติการ',
+    'mv.mission.body': 'ญี่ปุ่นเจริญเติบโตอย่างน่าทึ่งในยุคที่มีแรงงานมาก กฎ กระบวนการ และระบบที่สร้างขึ้นในช่วงนั้นทำงานได้ดีในสภาพแวดล้อมทางสังคมในขณะนั้น อย่างไรก็ตาม เมื่อยุคแรงงานล้นเกินสิ้นสุดและการขาดแคลนแรงงานเร่งตัวขึ้น จำเป็นต้องอัปเดตระบบสังคมทั้งหมดที่ตั้งอยู่บนสมมติฐานของการเติบโตของประชากร เราเน้นที่ "การปฏิบัติการ" ซึ่งเป็น OS ของการจัดการองค์กร และอัปเดตผ่านการสร้างความโปร่งใส การกำหนดมาตรฐาน การลดความซับซ้อน และการจัดระบบของงาน เราทำงานเพื่อสร้างสังคมที่วิธีการทำงานเปลี่ยนแปลง บริษัทและพนักงานเติบโตร่วมกัน และนวัตกรรมเกิดขึ้นอย่างต่อเนื่อง',
+    'mv.vision.h3': 'Vision', 'mv.vision.subtitle': 'อนาคตที่เรามุ่งสู่',
+    'mv.vision.catch': 'สร้างสังคมที่เต็มไปด้วยพลังทางปัญญา',
+    'mv.vision.body': 'เป้าหมายของเราคือ "สังคมที่เต็มไปด้วยพลังทางปัญญา" เพื่อบรรลุแนวคิด ผลิตภัณฑ์ และธุรกิจใหม่สำหรับอนาคต การคิดเชิงสร้างสรรค์เป็นสิ่งจำเป็น และการคิดเชิงสร้างสรรค์ต้องการเวลา ความสามารถ และทรัพยากร เมื่อผู้คนถูกครอบงำด้วยการดำเนินงานประจำวัน ก็ไม่มีพลังงานสำหรับความพยายามใหม่ เราช่วยลดของเสียในการปฏิบัติการ เปลี่ยนแปลงวิธีการทำงาน และสร้างส่วนเกินในทรัพยากร ด้วยส่วนเกินนั้น กิจกรรมที่มองไปข้างหน้าจะถูกดำเนินการ และแนวคิดที่สร้างสรรค์ ผลิตภัณฑ์ที่น่าสนใจ และธุรกิจใหม่จะถือกำเนิดอย่างต่อเนื่อง นั่นคือวิสัยทัศน์ของ Studist',
+    'value.label': 'Value / ค่านิยมหลัก', 'value.title': 'ค่านิยมหลักของเรา',
+    'value1.h4': 'ก้าวเข้าหาลูกค้า', 'value1.p': 'มีส่วนร่วมอย่างแข็งขันกับลูกค้าเพื่อให้ประสบความสำเร็จร่วมกัน บางครั้งคุณจะเห็นความเป็นไปได้ก็ต่อเมื่อคุณก้าวไปข้างหน้าเท่านั้น',
+    'value2.h4': 'ถ้าไม่แน่ใจ ลองดูก่อน', 'value2.p': 'แทนที่จะเป็นอัมพาตจากการคิดมากเกินไป ให้ก้าวไปข้างหน้าก่อน แม้จะไม่ได้ผลในครั้งแรก คุณก็สามารถเรียนรู้จากมันได้ ดังนั้นลองดูก่อนเลย',
+    'value3.h4': 'ก้าวข้ามขอบเขตของทีม', 'value3.p': 'ร่วมมือกันข้ามขอบเขตองค์กรในฐานะ All Studist ก้าวข้ามทีมของคุณเพื่อสร้างผลลัพธ์ที่ยิ่งใหญ่กว่าและคุณค่าใหม่',
+    'value4.h4': 'เรียนรู้และเติบโตอยู่เสมอ', 'value4.p': 'เพื่อเป็นมืออาชีพ แต่ละคนยังคงเรียนรู้ในฐานะ "Study + ist" มาเป็นแรงบันดาลใจให้กันและเติบโตร่วมกัน',
+    'product.label': 'Product / ผลิตภัณฑ์', 'product.title': 'Teachme <span class="title-ja">Series</span>',
+    'product.sub': 'สร้างเครื่องยนต์สำหรับทุนการเติบโตในอนาคต สำหรับทุกองค์กรในแนวหน้า',
+    'product.desc': 'แพลตฟอร์มสร้างและแชร์คู่มือการทำงานที่ใช้ในโรงงาน โลจิสติกส์ ค้าปลีก ร้านอาหาร และการดำเนินงานแนวหน้าอื่นๆ ด้วยการรองรับหลายภาษาและการใช้งานผ่านสมาร์ทโฟน ช่วยให้มีขั้นตอนและคุณภาพที่สม่ำเสมอในสาขาต่างประเทศ',
+    'product.feature1': 'สร้าง SOP ที่ทุกคนเข้าใจได้ง่ายด้วยวิดีโอและภาพ',
+    'product.feature2': 'รองรับหลายภาษา (ญี่ปุ่น อังกฤษ ไทย เวียดนาม ฯลฯ) สำหรับสถานที่ทำงานหลายวัฒนธรรม',
+    'product.feature3': 'เข้าถึงได้ทุกเมื่อจากสมาร์ทโฟน ช่วยให้การฝึกอบรมในสถานที่มีประสิทธิภาพ',
+    'product.feature4': 'แสดงสถานะการฝึกอบรมด้วยบันทึกการดู แบบทดสอบ และรายงาน',
+    'product.feature5': 'การสนับสนุนภาษาท้องถิ่นในไทยและเวียดนาม พร้อมความช่วยเหลือในการดำเนินการ',
+    'product.link.jp': 'เว็บไซต์ญี่ปุ่น', 'product.link.global': 'เว็บไซต์ต่างประเทศ',
+    'subs.label': 'Subsidiaries / สำนักงานท้องถิ่น', 'subs.title': 'ASEAN 2 <span class="title-ja">แห่ง</span>',
+    'subs.sub': 'เราสนับสนุนการกำหนดมาตรฐานธุรกิจและการพัฒนาบุคลากรสำหรับบริษัทญี่ปุ่นและบริษัทท้องถิ่นในไทยและเวียดนาม',
+    'label.founded': 'ก่อตั้ง', 'label.ceo': 'CEO', 'label.address': 'ที่อยู่', 'label.business': 'ธุรกิจ', 'label.market': 'ตลาด',
+    'th.name.ja': 'Studist (ประเทศไทย)', 'th.founded': 'สิงหาคม 2018', 'th.business': 'การขายและสนับสนุน Teachme Biz', 'th.market': 'ไทยและต่างประเทศ',
+    'vn.name.ja': 'Studist (เวียดนาม)', 'vn.founded': 'ธันวาคม 2025', 'vn.business': 'การขายและสนับสนุน Teachme Biz', 'vn.market': 'ทั่วเวียดนาม',
+    'contact.label': 'Contact / ติดต่อเรา', 'contact.title': 'ติดต่อเราได้เลย',
+    'contact.sub': 'สำหรับการนำ Teachme Biz ไปใช้ คำขอสาธิต การสอบถามเรื่องความร่วมมือ และอื่นๆ กรุณาติดต่อสำนักงานใกล้เคียงของคุณ'
+  },
+  vi: {
+    'page.title': 'Studist Global | Mở rộng toàn cầu',
+    'nav.about': 'Về chúng tôi', 'nav.subsidiaries': 'Chi nhánh', 'nav.product': 'Sản phẩm', 'nav.contact': 'Liên hệ',
+    'about.label': 'About / Về chúng tôi',
+    'about.title': 'Hướng tới trở thành "Đối tác Năng suất"',
+    'about.sub': 'Chúng tôi bắt đầu từ "giao tiếp" và đã nỗ lực thúc đẩy cải cách quy trình kinh doanh. Hiện nay, lấy khái niệm "Lean Operation" làm trọng tâm, chúng tôi đề xuất các cải tiến từ góc nhìn rộng hơn. Được giải phóng khỏi công việc kém hiệu quả, mọi người có thể tìm lại niềm vui thực sự trong công việc. Khi ngày càng nhiều nơi làm việc như vậy xuất hiện, sinh lực trí tuệ của toàn xã hội sẽ ngày càng phát triển. Đó là tương lai chúng tôi hướng tới.',
+    'about.text.h3': 'Từ Nhật Bản đến ASEAN.',
+    'about.text.p': 'Chú trọng vào tính linh động lao động cao, môi trường đa ngôn ngữ và nhu cầu không dùng giấy tờ của ASEAN, chúng tôi đã thành lập các công ty con tại Thái Lan và Việt Nam, cung cấp hỗ trợ ăn sâu vào thực tiễn địa phương.',
+    'stat.years.num': '8', 'stat.years.label': 'Năm có văn phòng nước ngoài<br>Thái Lan từ 2018',
+    'stat.languages.label': 'Ngôn ngữ được hỗ trợ<br>JA / EN / TH / VI',
+    'stat.customers.label': 'Công ty đã triển khai<br>Customers',
+    'stat.overseas.num': '100+', 'stat.overseas.label': 'Công ty nước ngoài đã triển khai',
+    'mv.label': 'Mission &amp; Vision', 'mv.title': 'Sứ mệnh và Tầm nhìn của chúng tôi',
+    'mv.mission.h3': 'Mission', 'mv.mission.subtitle': 'Sứ mệnh của chúng tôi',
+    'mv.mission.catch': 'Thay đổi cách làm việc và tương lai thông qua vận hành',
+    'mv.mission.body': 'Nhật Bản đã đạt được sự tăng trưởng đáng kinh ngạc trong thời kỳ bùng nổ dân số. Các quy tắc, quy trình và hệ thống được xây dựng trong thời kỳ đó đã hoạt động tốt trong môi trường xã hội lúc bấy giờ. Tuy nhiên, khi thời kỳ bùng nổ dân số kết thúc và tình trạng thiếu lao động ngày càng tăng, cần phải cập nhật tất cả các hệ thống xã hội dựa trên giả định tăng trưởng dân số. Chúng tôi tập trung vào "vận hành" — hệ điều hành của quản lý doanh nghiệp — và cập nhật thông qua việc trực quan hóa, chuẩn hóa, đơn giản hóa và hệ thống hóa công việc. Chúng tôi hướng tới xây dựng một xã hội nơi cách làm việc thay đổi, doanh nghiệp và nhân viên cùng phát triển.',
+    'mv.vision.h3': 'Vision', 'mv.vision.subtitle': 'Tương lai chúng tôi hướng tới',
+    'mv.vision.catch': 'Xây dựng xã hội tràn đầy sinh lực trí tuệ',
+    'mv.vision.body': 'Mục tiêu của chúng tôi là "một xã hội tràn đầy sinh lực trí tuệ." Để hiện thực hóa các sáng kiến, khái niệm và doanh nghiệp mới cho tương lai, tư duy sáng tạo là điều cần thiết. Và tư duy sáng tạo đòi hỏi thời gian, tài năng và nguồn lực. Khi mọi người bị áp đảo bởi các hoạt động hàng ngày, không có năng lực cho những nỗ lực mới. Chúng tôi góp phần giảm thiểu lãng phí vận hành, thay đổi cách làm việc và tạo ra nguồn dự phòng trong các nguồn lực như thời gian, vốn và nhân tài. Với nguồn dự phòng đó, các hoạt động hướng tới tương lai được thực hiện liên tục, và các khái niệm sáng tạo cùng doanh nghiệp mới liên tục ra đời. Đó là tầm nhìn của Studist.',
+    'value.label': 'Value / Giá trị cốt lõi', 'value.title': 'Giá trị cốt lõi của chúng tôi',
+    'value1.h4': 'Lao vào khách hàng', 'value1.p': 'Chủ động gắn kết với khách hàng để cùng nhau thành công. Đôi khi bạn chỉ nhìn thấy những gì có thể khi bạn đã tiến một bước về phía trước.',
+    'value2.h4': 'Nếu không chắc, hãy thử', 'value2.p': 'Thay vì bị tê liệt vì suy nghĩ quá nhiều, hãy tiến một bước về phía trước. Dù không thành công ngay lần đầu, bạn có thể học hỏi từ đó — vì vậy hãy thử đi.',
+    'value3.h4': 'Vượt ra ngoài ranh giới nhóm', 'value3.p': 'Hợp tác vượt qua ranh giới tổ chức như All Studist. Vượt ra ngoài nhóm của bạn để tạo ra kết quả lớn hơn và giá trị mới.',
+    'value4.h4': 'Tiếp tục học hỏi và phát triển', 'value4.p': 'Để trở thành chuyên gia, mỗi người tiếp tục học hỏi với tư cách là "Study + ist". Hãy truyền cảm hứng cho nhau và cùng phát triển.',
+    'product.label': 'Product / Sản phẩm', 'product.title': 'Teachme <span class="title-ja">Series</span>',
+    'product.sub': 'Tạo ra động cơ vốn tăng trưởng cho tương lai, cho mọi tổ chức ở tuyến đầu',
+    'product.desc': 'Nền tảng tạo và chia sẻ hướng dẫn công việc được sử dụng trong sản xuất, logistics, bán lẻ, dịch vụ ăn uống và các hoạt động tuyến đầu khác. Với hỗ trợ đa ngôn ngữ và sử dụng smartphone, giúp thực hiện quy trình và chất lượng nhất quán tại các văn phòng nước ngoài.',
+    'product.feature1': 'Dễ dàng tạo SOP mà ai cũng có thể hiểu bằng nội dung video và hình ảnh',
+    'product.feature2': 'Hỗ trợ đa ngôn ngữ (Nhật, Anh, Thái, Việt, v.v.) cho môi trường làm việc đa văn hóa',
+    'product.feature3': 'Truy cập bất cứ lúc nào từ smartphone, nâng cao hiệu quả đào tạo tại chỗ',
+    'product.feature4': 'Trực quan hóa tình trạng đào tạo với nhật ký xem, bài kiểm tra và báo cáo',
+    'product.feature5': 'Hỗ trợ ngôn ngữ địa phương tại Thái Lan & Việt Nam với hỗ trợ triển khai tại chỗ',
+    'product.link.jp': 'Trang web Nhật Bản', 'product.link.global': 'Trang web quốc tế',
+    'subs.label': 'Subsidiaries / Văn phòng địa phương', 'subs.title': 'ASEAN 2 <span class="title-ja">Địa điểm</span>',
+    'subs.sub': 'Chúng tôi hỗ trợ chuẩn hóa kinh doanh và phát triển nhân lực cho các công ty Nhật Bản và công ty địa phương tại Thái Lan và Việt Nam.',
+    'label.founded': 'Thành lập', 'label.ceo': 'CEO', 'label.address': 'Địa chỉ', 'label.business': 'Kinh doanh', 'label.market': 'Thị trường',
+    'th.name.ja': 'Studist (Thái Lan)', 'th.founded': 'Tháng 8 năm 2018', 'th.business': 'Bán hàng & Hỗ trợ Teachme Biz', 'th.market': 'Thái Lan & Quốc tế',
+    'vn.name.ja': 'Studist (Việt Nam)', 'vn.founded': 'Tháng 12 năm 2025', 'vn.business': 'Bán hàng & Hỗ trợ Teachme Biz', 'vn.market': 'Toàn bộ Việt Nam',
+    'contact.label': 'Contact / Liên hệ', 'contact.title': 'Hãy liên hệ với chúng tôi',
+    'contact.sub': 'Để triển khai Teachme Biz, yêu cầu demo, tư vấn hợp tác và nhiều hơn nữa, vui lòng liên hệ văn phòng gần nhất của bạn.'
+  }
+};
+
+function setLang(lang) {
+  const t = translations[lang];
+  if (!t) return;
+  document.documentElement.lang = lang;
+  document.title = t['page.title'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  localStorage.setItem('studist-lang', lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+
+setLang(localStorage.getItem('studist-lang') || 'ja');
+</script>
 </body>
 </html>
