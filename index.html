@@ -92,6 +92,7 @@
 
   /* ABOUT */
   .about { background: var(--light); }
+  .about .section-sub { max-width: 100%; }
   #subsidiaries { background: var(--light); }
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
@@ -110,6 +111,7 @@
     font-size: 36px; font-weight: 800; letter-spacing: -0.02em;
     color: var(--accent); line-height: 1;
   }
+  .stat-unit { font-size: 18px; font-weight: 800; }
   .stat-label { font-size: 12px; color: var(--gray); margin-top: 6px; }
 
   /* MISSION VISION */
@@ -123,7 +125,10 @@
     font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--accent); margin-bottom: 20px;
   }
-  .mv-block p {
+  .mv-subtitle {
+    font-size: 13px; color: var(--gray); margin-bottom: 8px;
+  }
+  .mv-catch {
     font-size: 22px; font-weight: 700; line-height: 1.5;
     color: var(--black); margin-bottom: 16px; letter-spacing: -0.01em;
   }
@@ -188,8 +193,47 @@
     letter-spacing: -0.03em; opacity: 0.6;
   }
 
+  /* VALUE */
+  .value { background: var(--light); }
+  .value-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+    margin-top: 56px;
+  }
+  @media (max-width: 768px) { .value-grid { grid-template-columns: 1fr; } }
+  .value-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+    display: grid; grid-template-rows: 300px 300px;
+    height: 600px;
+  }
+  .value-card-img-wrap {
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .value-card-img {
+    width: 100%; height: 100%;
+    object-fit: contain; display: block;
+  }
+  .value-card-body {
+    padding: 32px;
+    border-top: 3px solid var(--accent);
+    overflow: auto;
+  }
+  .value-card-label {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px; display: block;
+  }
+  .value-card h3 {
+    font-size: 22px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.01em;
+  }
+  .value-card h4 {
+    font-size: 15px; font-weight: 700; margin-bottom: 16px; color: var(--black);
+  }
+  .value-card p { font-size: 14px; color: var(--gray); line-height: 1.8; }
+
   /* CONTACT */
-  .contact { text-align: center; background: var(--light); }
+  .contact { text-align: center; background: #fff; }
   .contact .section-title { margin-bottom: 12px; }
   .contact .section-sub { margin: 0 auto 40px; }
   .contact-cards {
@@ -248,28 +292,28 @@
   <div class="section-inner">
     <div class="section-label">About / 私たちについて</div>
     <h2 class="section-title">スタディストグループの<br>グローバル展開</h2>
-    <p class="section-sub">スタディストはタイ・ベトナムに現地法人を展開し、ASEANにおけるオペレーションを効率化するための手段を提供し、現地企業の「現場力と生産性」の向上を支援しています。</p>
+    <p class="section-sub">株式会社スタディストは、2010年3月に設立。ミッション「オペレーションから、働き方と未来を変えていく」、ビジョン「知的活力みなぎる社会をつくる」のもと、主力製品Teachme Bizは国内外2,200社以上に導入され、動画マニュアル作成支援ツール市場シェアNo.1を獲得しています。</p>
     <div class="about-grid">
       <div class="about-text">
         <h3>日本発、ASEANへ。</h3>
-        <p>2010年に日本で創業した株式会社スタディストは、クラウド型マニュアル作成・共有サービス「Teachme Biz」を軸に事業を展開。高い人材流動性・多言語環境・ペーパーレス化のニーズが高まるASEANにおいて、タイおよびベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。</p>
+        <p>ASEANの高い人材流動性・多言語環境・ペーパーレス化ニーズに着目。タイ・ベトナムに現地子会社を設立し、ローカルに根ざしたサポートを提供しています。</p>
       </div>
       <div class="about-stats">
         <div class="stat">
-          <div class="stat-num">2+</div>
-          <div class="stat-label">ASEAN 現地法人<br>ASEAN Subsidiaries</div>
+          <div class="stat-num">8<span class="stat-unit">年</span></div>
+          <div class="stat-label">海外拠点設立<br>タイ 2018年〜</div>
         </div>
         <div class="stat">
-          <div class="stat-num">3</div>
-          <div class="stat-label">対応言語（日・英・タイ）<br>Languages</div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">対応言語<br>日・英・タイ・越</div>
         </div>
         <div class="stat">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">対応業種<br>Industries</div>
+          <div class="stat-num">2,300+</div>
+          <div class="stat-label">導入企業数<br>Customers</div>
         </div>
         <div class="stat">
-          <div class="stat-num">SaaS</div>
-          <div class="stat-label">クラウド型サービス<br>Cloud Platform</div>
+          <div class="stat-num">100<span class="stat-unit">社以上</span></div>
+          <div class="stat-label">海外導入企業数</div>
         </div>
       </div>
     </div>
@@ -284,13 +328,82 @@
     <div class="mv-grid">
       <div class="mv-block">
         <h3>Mission</h3>
-        <p>Transforming the Future of Work Through Operations</p>
-        <small>Japan achieved remarkable economic growth during the Showa era, often referred to as the "Asian Miracle," driven by its population bonus. The corporate rules, business processes, procedures, and systems developed during that time functioned effectively within the social environment of the era.<br><br>However, as the population bonus era has come to an end and labor shortages intensify, we must now update the systems of society that were built on the assumption of continuous population growth.<br><br>At Studist, we focus on operations—the operating system of organizational management. By promoting visualization, standardization, simplification, and systemization (thorough implementation) of business activities, we work to modernize operations.<br><br>Our mission is to transform the way people work, enabling both companies and their employees to grow together, and to help create a society where innovation continues to thrive.</small>
+        <p class="mv-subtitle">私たちの使命</p>
+        <p class="mv-catch">オペレーションから、働き方と未来を変えていく</p>
+        <small>日本は、昭和の人口ボーナス期に「アジアの奇跡」と言われるほどの躍進を遂げました。 その過程で作られていった企業運営のルール、業務プロセス、手順、仕組みも、 当時の社会環境では適切に機能していました。 しかし、人口ボーナス期が終わり、労働力不足が加速していく今、 人口増加を前提にしたあらゆる社会の仕組みをアップデートしていく必要があります。 私たちは、企業運営のOSともいえる「オペレーション」に焦点を当て、 業務の可視化、標準化、単純化、仕組み化（徹底化）を通じて、オペレーションをアップデートしていきます。 働き方を変え、企業と従業員がともに成長し、 イノベーションが生まれ続ける社会の実現のため取り組んでいきます。</small>
       </div>
       <div class="mv-block">
         <h3>Vision</h3>
-        <p>To build a society that is filled with knowledge power driven by the true understanding and creative thinking.</p>
-        <small>If communication became simpler, both the sender and receiver of the message will no longer have to waste time on unnecessary things but can spend more time on creative things instead.<br><br>This will allow the society to be built with knowledge power-driven by the true understanding and creative thinking. And that is truly Studist's vision.</small>
+        <p class="mv-subtitle">私たちが目指す姿</p>
+        <p class="mv-catch">知的活力みなぎる社会をつくる</p>
+        <small>私たちが目指すゴールは、「知的活力みなぎる社会」です。 未来に向けた新しい取り組みや業務、革新的な構想や事業。 これらを実現するためには、創造的な思考が欠かせません。 そして、創造的な思考には時間も、人材も、資金も必要です。 現状の業務に忙殺されている状態では、新しいことに取り組む余力が生まれません。 私たちはオペレーションのロスを減らし、働き方を変えることに貢献し、時間・資金・人材といった資源に余力を生み出します。 余力が生まれることで、未来に向けた活動が次々と実行され、 革新的な構想や魅力的な製品、新しい事業が継続的に生まれていきます。 その積み重ねが企業や社会全体をより活力ある状態へと近づけていきます。 「オペレーションから働き方と未来を変えていく」というミッションのもと、 新たな挑戦や創造が次々と生まれる「知的活力みなぎる社会」を実現します。 これが私たちスタディストのビジョンです。</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE -->
+<section class="value" id="value">
+  <div class="section-inner">
+    <div class="section-label">Value / コアバリュー</div>
+    <h2 class="section-title">私たちの行動指針</h2>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-card-img-wrap"><img src="01_withthecustomer.png" alt="With the customer" class="value-card-img"></div>
+        <div class="value-card-body">
+          <h3>With the customer</h3>
+          <h4>顧客に飛び込もう</h4>
+          <p>お客様とともに成功に向かえるよう、積極的に踏み込んでみる。前に進むことで初めて見えることもあるのだから、お客様へ飛び込もう。</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-card-img-wrap"><img src="02_tryfirst.png" alt="Try first" class="value-card-img"></div>
+        <div class="value-card-body">
+          <h3>Try first</h3>
+          <h4>悩むなら、やってみよう</h4>
+          <p>悩みすぎて何もしないことを選択するよりは、まずは一歩前に踏み出してみる。一度でうまくいかなくても、そこから学べばいいのだから、まずはやってみよう。</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-card-img-wrap"><img src="03_beyondteam.png" alt="Beyond team" class="value-card-img"></div>
+        <div class="value-card-body">
+          <h3>Beyond team</h3>
+          <h4>チームの枠を越えよう</h4>
+          <p>所属組織の垣根を越えて、All Studistで協働する。より大きな成果、新しい価値を生み出すために、チームの枠を越えよう。</p>
+        </div>
+      </div>
+      <div class="value-card">
+        <div class="value-card-img-wrap"><img src="04_bestudyist.png" alt="Be Study + ist" class="value-card-img"></div>
+        <div class="value-card-body">
+          <h3>Be Study + ist</h3>
+          <h4>学び、成長し続けよう</h4>
+          <p>プロフェッショナルであるために、1人ひとりが"Study + ist"として学び続ける。お互いに良い刺激を与え、成長し続けよう。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section class="product" id="product">
+  <div class="section-inner">
+    <div class="section-label">Product / プロダクト</div>
+    <h2 class="section-title">Teachme Biz</h2>
+    <p class="section-sub">現場の「やり方」を、動画・画像・テキストで誰でも簡単に作れるクラウド型マニュアルプラットフォーム。</p>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Biz</h3>
+        <p>製造・物流・小売・飲食など多様な業種の現場で活用されるSOP/マニュアル作成・共有・管理サービス。スマートフォンだけで作成・閲覧でき、多言語対応で ASEAN の現場に最適です。</p>
+        <ul class="feature-list">
+          <li>動画・画像を使ったわかりやすいマニュアル作成</li>
+          <li>多言語対応（日本語・英語・タイ語 等）</li>
+          <li>スマートフォンからいつでも閲覧</li>
+          <li>閲覧状況・理解度の管理・レポート機能</li>
+          <li>SAML/SSO 対応、エンタープライズセキュリティ</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <div class="product-visual-text">TB</div>
       </div>
     </div>
   </div>
@@ -366,31 +479,6 @@
         <span class="sub-tag">Vietnam</span>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCT -->
-<section class="product" id="product">
-  <div class="section-inner">
-    <div class="section-label">Product / プロダクト</div>
-    <h2 class="section-title">Teachme Biz</h2>
-    <p class="section-sub">現場の「やり方」を、動画・画像・テキストで誰でも簡単に作れるクラウド型マニュアルプラットフォーム。</p>
-    <div class="product-card">
-      <div>
-        <h3>Teachme Biz</h3>
-        <p>製造・物流・小売・飲食など多様な業種の現場で活用されるSOP/マニュアル作成・共有・管理サービス。スマートフォンだけで作成・閲覧でき、多言語対応で ASEAN の現場に最適です。</p>
-        <ul class="feature-list">
-          <li>動画・画像を使ったわかりやすいマニュアル作成</li>
-          <li>多言語対応（日本語・英語・タイ語 等）</li>
-          <li>スマートフォンからいつでも閲覧</li>
-          <li>閲覧状況・理解度の管理・レポート機能</li>
-          <li>SAML/SSO 対応、エンタープライズセキュリティ</li>
-        </ul>
-      </div>
-      <div class="product-visual">
-        <div class="product-visual-text">TB</div>
-      </div>
     </div>
   </div>
 </section>
