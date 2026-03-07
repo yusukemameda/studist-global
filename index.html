@@ -183,6 +183,14 @@
   .feature-list li::before {
     content: '✓'; color: var(--accent); font-weight: 700; font-size: 14px;
   }
+  .product-links { display: flex; gap: 12px; margin-top: 24px; }
+  .product-link {
+    display: inline-block; padding: 8px 20px;
+    border: 1.5px solid var(--accent); border-radius: 6px;
+    font-size: 13px; font-weight: 600; color: var(--accent);
+    transition: background 0.2s, color 0.2s;
+  }
+  .product-link:hover { background: var(--accent); color: #fff; }
   .product-visual {
     background: linear-gradient(135deg, #e8efff 0%, #dbeafe 100%);
     border-radius: 8px; height: 240px;
@@ -411,6 +419,10 @@
           <li>閲覧状況・理解度テスト・レポートで教育状況を可視化</li>
           <li>タイ・ベトナムの現地語サポートと現地訪問による導入支援</li>
         </ul>
+        <div class="product-links">
+          <a href="https://biz.teachme.jp/" target="_blank" rel="noopener" class="product-link">日本サイト</a>
+          <a href="https://teachme-biz.com/ja/" target="_blank" rel="noopener" class="product-link">海外サイト</a>
+        </div>
       </div>
       <div class="product-visual">
         <img src="teachmebiz.webp" alt="Teachme Biz" style="width:100%;height:100%;object-fit:contain;">
