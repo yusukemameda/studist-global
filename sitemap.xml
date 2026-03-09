@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Japanese home -->
+  <url>
+    <loc>https://yusukemameda.github.io/studist-global/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://yusukemameda.github.io/studist-global/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yusukemameda.github.io/studist-global/en/"/>
+    <xhtml:link rel="alternate" hreflang="th"        href="https://yusukemameda.github.io/studist-global/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi"        href="https://yusukemameda.github.io/studist-global/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yusukemameda.github.io/studist-global/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- English home -->
+  <url>
+    <loc>https://yusukemameda.github.io/studist-global/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://yusukemameda.github.io/studist-global/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yusukemameda.github.io/studist-global/en/"/>
+    <xhtml:link rel="alternate" hreflang="th"        href="https://yusukemameda.github.io/studist-global/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi"        href="https://yusukemameda.github.io/studist-global/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yusukemameda.github.io/studist-global/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Thai home -->
+  <url>
+    <loc>https://yusukemameda.github.io/studist-global/th/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://yusukemameda.github.io/studist-global/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yusukemameda.github.io/studist-global/en/"/>
+    <xhtml:link rel="alternate" hreflang="th"        href="https://yusukemameda.github.io/studist-global/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi"        href="https://yusukemameda.github.io/studist-global/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yusukemameda.github.io/studist-global/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Vietnamese home -->
+  <url>
+    <loc>https://yusukemameda.github.io/studist-global/vi/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://yusukemameda.github.io/studist-global/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yusukemameda.github.io/studist-global/en/"/>
+    <xhtml:link rel="alternate" hreflang="th"        href="https://yusukemameda.github.io/studist-global/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi"        href="https://yusukemameda.github.io/studist-global/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yusukemameda.github.io/studist-global/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Careers listing -->
+  <url>
+    <loc>https://yusukemameda.github.io/studist-global/careers/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yusukemameda.github.io/studist-global/careers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yusukemameda.github.io/studist-global/careers/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- SaaS Sales Consultant (JA) -->
+  <url>
+    <loc>https://yusukemameda.github.io/studist-global/careers/saas-sales-consultant.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://yusukemameda.github.io/studist-global/careers/saas-sales-consultant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yusukemameda.github.io/studist-global/careers/saas-sales-consultant.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Junior Sales Consultant (EN) -->
+  <url>
+    <loc>https://yusukemameda.github.io/studist-global/careers/junior-sales-consultant.html</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://yusukemameda.github.io/studist-global/careers/junior-sales-consultant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yusukemameda.github.io/studist-global/careers/junior-sales-consultant.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
