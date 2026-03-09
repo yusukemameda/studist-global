@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Sales Consultant（日本語話者向け）| Studist Global Careers</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #111;
+    --gray: #666;
+    --light: #f5f5f5;
+    --border: #e0e0e0;
+    --accent: #0341B8;
+  }
+  body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    color: var(--black);
+    background: #fff;
+    line-height: 1.8;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 48px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .logo { font-size: 18px; font-weight: 700; letter-spacing: 0.04em; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; font-size: 13px; color: var(--gray); align-items: center; }
+  .nav-links a:hover { color: var(--black); }
+  .nav-links .nav-active { color: var(--accent); font-weight: 600; }
+
+  /* BREADCRUMB */
+  .breadcrumb {
+    padding: 100px 48px 0;
+    max-width: 880px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: var(--gray);
+  }
+  .breadcrumb a { color: var(--accent); }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 6px; }
+
+  /* HERO */
+  .job-hero {
+    padding: 24px 48px 48px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .job-tag {
+    display: inline-block;
+    font-size: 11px; padding: 4px 12px;
+    background: var(--accent); color: #fff;
+    border-radius: 4px; letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+  .job-hero h1 {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800; letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  .job-meta {
+    display: flex; flex-wrap: wrap; gap: 16px;
+    font-size: 13px; color: var(--gray);
+    margin-bottom: 32px;
+  }
+  .job-meta-item { display: flex; align-items: center; gap: 6px; }
+  .job-meta-item svg { flex-shrink: 0; }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: var(--border); margin: 0 48px 0; max-width: 784px; margin-left: 48px; }
+
+  /* CONTENT */
+  .job-content {
+    padding: 48px 48px 80px;
+    max-width: 880px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 64px;
+  }
+
+  /* MAIN */
+  .job-main section { margin-bottom: 48px; }
+  .job-main h2 {
+    font-size: 16px; font-weight: 800;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .job-main p { font-size: 14px; color: #333; margin-bottom: 12px; }
+  .job-main ul {
+    list-style: none;
+    padding: 0;
+  }
+  .job-main ul li {
+    font-size: 14px; color: #333;
+    padding: 6px 0 6px 20px;
+    position: relative;
+  }
+  .job-main ul li::before {
+    content: "―";
+    position: absolute; left: 0;
+    color: var(--accent);
+    font-size: 12px;
+  }
+  .job-main .highlight-box {
+    background: var(--light);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 16px;
+  }
+  .job-main .highlight-box p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* SIDEBAR */
+  .job-sidebar {}
+  .sidebar-card {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 90px;
+  }
+  .sidebar-card h3 {
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 16px;
+  }
+  .sidebar-item {
+    display: flex; justify-content: space-between;
+    font-size: 13px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .sidebar-item-label { color: var(--gray); }
+  .sidebar-item-value { font-weight: 600; text-align: right; max-width: 160px; }
+
+  /* APPLY BUTTON */
+  .apply-section {
+    margin-top: 32px;
+  }
+  .btn-apply {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 8px;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-apply:hover { opacity: 0.88; transform: translateY(-1px); }
+  .apply-note {
+    font-size: 11px; color: var(--gray);
+    text-align: center; margin-top: 10px;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 48px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: var(--gray);
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .breadcrumb { padding: 90px 24px 0; }
+    .job-hero { padding: 20px 24px 40px; }
+    .divider { margin: 0 24px; }
+    .job-content { padding: 40px 24px 60px; grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="../">Studist<span>.</span> Global</a>
+  <div class="nav-links">
+    <a href="../#about">About</a>
+    <a href="../#product">Product</a>
+    <a href="../#subsidiaries">Subsidiaries</a>
+    <a href="../#contact">Contact</a>
+    <a href="./" class="nav-active">Careers</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="../">Home</a>
+  <span>›</span>
+  <a href="./">Careers</a>
+  <span>›</span>
+  SaaS Sales Consultant
+</div>
+
+<!-- HERO -->
+<div class="job-hero">
+  <div class="job-tag">Sales</div>
+  <h1>SaaS Sales Consultant<br>（日本語話者向け）</h1>
+  <div class="job-meta">
+    <div class="job-meta-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      バンコク（タイ）
+    </div>
+    <div class="job-meta-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      正社員
+    </div>
+    <div class="job-meta-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      勤務時間 9:00〜18:00
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CONTENT -->
+<div class="job-content">
+
+  <!-- MAIN -->
+  <div class="job-main">
+
+    <section>
+      <h2>ポジション概要</h2>
+      <div class="highlight-box">
+        <p>タイを拠点に、マニュアル作成・共有プラットフォーム「Teachme Biz」を通じて、お客様企業のオペレーション改革・業務改善を支援するポジションです。</p>
+      </div>
+      <p>Sales Consultantとして、課題解決型の法人営業経験を活かし、業務プロセスの可視化・標準化・単純化・仕組み化を提案していただきます。</p>
+      <p>多国籍メンバーと英語で協働しながら、ASEANを中心とした企業の生産性向上に貢献したい日本語ネイティブの方を歓迎します。</p>
+    </section>
+
+    <section>
+      <h2>業務内容</h2>
+      <ul>
+        <li>お客様との関係構築やヒアリングを通じて、業務上の課題やボトルネックを明らかにする</li>
+        <li>マニュアル整備や業務プロセスの見える化・標準化による改善案を提案し、導入に向けたストーリーを組み立てる</li>
+        <li>提案資料の作成、オンライン・対面でのプレゼンテーションの実施</li>
+        <li>新規リードの獲得からナーチャリング、商談、クロージングまで一連の営業プロセスを主体的に推進する</li>
+        <li>受注後のオンボーディングをリードし、現場での活用定着に向けて社内外の関係者と連携する</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>こんな会社です</h2>
+      <p><strong>ミッション：</strong>オペレーションから、働き方と未来を変えていく</p>
+      <p>私たちは「知的活力みなぎる社会をつくる」をビジョンに、マニュアル作成・共有プラットフォーム「Teachme Biz」を提供しています。画像や動画を使って直感的にマニュアルを作成できるSaaSとして、業務の可視化・標準化・単純化・仕組み化を通じて、国内外の企業の生産性向上を支援しています。</p>
+      <p>2018年にタイ法人を設立し、2026年には海外2拠点目となるベトナム法人も設立し、ASEAN全域へと事業を拡大中です。</p>
+      <p>タイ拠点では、ナショナルスタッフと日本人が在籍しており、多国籍チームで働いています。公用語は英語で、職種や部門、国籍を超えて密にコミュニケーションを取り合う文化があります。「Beyond team」を大切にし、日本本社や他国のパートナーとも連携しながら、さまざまなバックグラウンドのメンバーと協働できる環境です。</p>
+    </section>
+
+    <section>
+      <h2>応募資格（必須）</h2>
+      <ul>
+        <li>学歴：大卒以上</li>
+        <li>経験：課題解決型の法人営業経験（2年以上）<br><small style="color:var(--gray);">※御用聞き営業ではなく、顧客の潜在的な課題に対して解決策を提供した経験を重視しています。</small></li>
+        <li>語学：英語またはタイ語が中級〜上級レベル以上<br><small style="color:var(--gray);">※英語は、クライアントとのディスカッションが可能なレベル</small></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>歓迎スキル・経験</h2>
+      <ul>
+        <li>製造業の業務改善・生産性向上プロジェクトに関わったご経験（現場改善・品質向上・標準作業の策定など）</li>
+        <li>製造業のお客様への法人営業経験、または製造現場のプロセスや専門用語にある程度親しみがある方</li>
+        <li>マニュアル整備、業務プロセス改善、教育・研修などのプロジェクトに関わったご経験</li>
+        <li>SaaS・ITソリューションの営業または導入支援のご経験</li>
+        <li>タイ語、マレー語、インドネシア語でのコミュニケーションスキル</li>
+        <li>ASEANでのビジネスや海外勤務のご経験</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>求める人物像</h2>
+      <ul>
+        <li>当社のミッション・ビジョン・プロダクトに共感し、顧客の業務改善・オペレーション改革に本気で向き合える方</li>
+        <li>チームワークを重んじ、多国籍メンバーとオープンにコミュニケーションできる方</li>
+        <li>会社から与えられた目標だけでなく、自身が目指す姿から目標を設定し、PDCAを回せる方</li>
+        <li>現状維持ではなく、現状打破の姿勢で新しいやり方を考え続けられる方</li>
+        <li>製造業の現場や業務プロセスへの理解があり、お客様の課題や改善余地に気づきやすい方だとより活躍しやすいポジションです</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="job-sidebar">
+    <div class="sidebar-card">
+      <h3>求人情報</h3>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">勤務地</span>
+        <span class="sidebar-item-value">バンコク（タイ）</span>
+      </div>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">雇用形態</span>
+        <span class="sidebar-item-value">正社員</span>
+      </div>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">月給</span>
+        <span class="sidebar-item-value">50,000〜100,000 THB</span>
+      </div>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">勤務時間</span>
+        <span class="sidebar-item-value">9:00〜18:00（休憩1時間）</span>
+      </div>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">休日</span>
+        <span class="sidebar-item-value">土日・祝日</span>
+      </div>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">有給</span>
+        <span class="sidebar-item-value">本採用6ヶ月経過後より付与</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>福利厚生</h3>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">ビザ</span>
+        <span class="sidebar-item-value">就労ビザ・労働許可証支給</span>
+      </div>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">健康診断</span>
+        <span class="sidebar-item-value">年1回</span>
+      </div>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">社会保険</span>
+        <span class="sidebar-item-value">あり</span>
+      </div>
+      <div class="sidebar-item">
+        <span class="sidebar-item-label">健康保険</span>
+        <span class="sidebar-item-value">民間保険あり（試用期間後）</span>
+      </div>
+    </div>
+
+    <div class="apply-section">
+      <a href="mailto:recruit-th@studist.co.th?subject=Application%3A%20SaaS%20Sales%20Consultant&body=お名前%3A%0A現職%3A%0Aメッセージ%3A" class="btn-apply">
+        Apply Now
+      </a>
+      <p class="apply-note">recruit-th@studist.co.th<br>Attn: Shiomi</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>&copy; 2026 Studist Corporation. All rights reserved.</div>
+  <div>Studist (Thailand) Co., Ltd. &nbsp;|&nbsp; Studist (Vietnam) Co., Ltd.</div>
+</footer>
+
+</body>
+</html>
