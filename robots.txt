@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yusukemameda.github.io/studist-global/sitemap.xml
