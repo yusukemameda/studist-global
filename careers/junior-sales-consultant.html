@@ -26,7 +26,7 @@
     position: fixed; top: 0; left: 0; right: 0;
     display: flex; justify-content: space-between; align-items: center;
     padding: 20px 48px;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.97);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     z-index: 100;
@@ -37,10 +37,38 @@
   .nav-links a:hover { color: var(--black); }
   .nav-links .nav-active { color: var(--accent); font-weight: 600; }
 
+  /* STICKY BAR */
+  .sticky-bar {
+    position: fixed; top: 65px; left: 0; right: 0;
+    z-index: 90;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .sticky-bar-title {
+    font-size: 14px; font-weight: 700;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    max-width: 60%;
+  }
+  .sticky-btn-apply {
+    padding: 10px 28px;
+    background: var(--accent); color: #fff;
+    font-size: 14px; font-weight: 700;
+    border-radius: 6px; white-space: nowrap;
+    transition: opacity 0.2s, transform 0.15s;
+    flex-shrink: 0;
+  }
+  .sticky-btn-apply:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  /* PAGE BODY OFFSET */
+  .page-body { padding-top: 122px; }
+
   /* BREADCRUMB */
   .breadcrumb {
-    padding: 100px 48px 0;
-    max-width: 880px;
+    padding: 20px 48px 0;
+    max-width: 760px;
     margin: 0 auto;
     font-size: 12px;
     color: var(--gray);
@@ -49,10 +77,10 @@
   .breadcrumb a:hover { text-decoration: underline; }
   .breadcrumb span { margin: 0 6px; }
 
-  /* HERO */
-  .job-hero {
-    padding: 24px 48px 48px;
-    max-width: 880px;
+  /* JOB HEADER */
+  .job-header {
+    padding: 28px 48px 40px;
+    max-width: 760px;
     margin: 0 auto;
   }
   .job-tag {
@@ -62,120 +90,87 @@
     border-radius: 4px; letter-spacing: 0.06em;
     margin-bottom: 16px;
   }
-  .job-hero h1 {
-    font-size: clamp(24px, 4vw, 36px);
+  .job-header h1 {
+    font-size: clamp(22px, 3.5vw, 32px);
     font-weight: 800; letter-spacing: -0.02em;
-    line-height: 1.3;
-    margin-bottom: 16px;
+    line-height: 1.3; margin-bottom: 16px;
   }
   .job-meta {
     display: flex; flex-wrap: wrap; gap: 16px;
     font-size: 13px; color: var(--gray);
-    margin-bottom: 32px;
   }
   .job-meta-item { display: flex; align-items: center; gap: 6px; }
-  .job-meta-item svg { flex-shrink: 0; }
 
   /* DIVIDER */
-  .divider { height: 1px; background: var(--border); margin: 0 48px; }
+  .divider {
+    height: 1px; background: var(--border);
+    max-width: 760px; margin: 0 auto;
+  }
 
   /* CONTENT */
   .job-content {
-    padding: 48px 48px 80px;
-    max-width: 880px;
+    padding: 48px 48px 100px;
+    max-width: 760px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 64px;
+  }
+  .job-content section { margin-bottom: 52px; }
+
+  /* SECTION HEADING */
+  .job-content h2 {
+    font-size: 15px; font-weight: 800;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent);
+    line-height: 1.4;
   }
 
-  /* MAIN */
-  .job-main section { margin-bottom: 48px; }
-  .job-main h2 {
-    font-size: 16px; font-weight: 800;
-    letter-spacing: 0.04em;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--accent);
-    display: inline-block;
-  }
-  .job-main p { font-size: 14px; color: #333; margin-bottom: 12px; }
-  .job-main ul {
-    list-style: none;
-    padding: 0;
-  }
-  .job-main ul li {
+  /* TEXT */
+  .job-content p { font-size: 14px; color: #333; margin-bottom: 12px; }
+
+  /* LIST */
+  .job-content ul { list-style: none; padding: 0; }
+  .job-content ul li {
     font-size: 14px; color: #333;
-    padding: 6px 0 6px 20px;
+    padding: 7px 0 7px 20px;
     position: relative;
+    border-bottom: 1px solid #f0f0f0;
   }
-  .job-main ul li::before {
+  .job-content ul li:last-child { border-bottom: none; }
+  .job-content ul li::before {
     content: "―";
     position: absolute; left: 0;
-    color: var(--accent);
-    font-size: 12px;
+    color: var(--accent); font-size: 12px;
   }
-  .job-main .highlight-box {
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
     background: var(--light);
     border-left: 3px solid var(--accent);
-    padding: 20px 24px;
+    padding: 18px 22px;
     border-radius: 0 8px 8px 0;
     margin-bottom: 16px;
   }
-  .job-main .highlight-box p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.8;
-  }
+  .highlight-box p { margin: 0; font-size: 14px; }
 
-  /* SIDEBAR */
-  .job-sidebar {}
-  .sidebar-card {
-    background: var(--light);
-    border-radius: 12px;
-    padding: 28px;
-    margin-bottom: 20px;
-    position: sticky;
-    top: 90px;
+  /* INFO GRID */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 16px;
   }
-  .sidebar-card h3 {
-    font-size: 13px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 16px;
-  }
-  .sidebar-item {
-    display: flex; justify-content: space-between;
-    font-size: 13px;
-    padding: 10px 0;
+  .info-cell {
+    padding: 14px 20px;
     border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
   }
-  .sidebar-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .sidebar-item-label { color: var(--gray); }
-  .sidebar-item-value { font-weight: 600; text-align: right; max-width: 160px; }
-
-  /* APPLY BUTTON */
-  .apply-section {
-    margin-top: 32px;
-  }
-  .btn-apply {
-    display: block;
-    width: 100%;
-    padding: 16px 24px;
-    background: var(--accent);
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 8px;
-    transition: opacity 0.2s, transform 0.15s;
-  }
-  .btn-apply:hover { opacity: 0.88; transform: translateY(-1px); }
-  .apply-note {
-    font-size: 11px; color: var(--gray);
-    text-align: center; margin-top: 10px;
-    line-height: 1.6;
-  }
+  .info-cell:nth-child(even) { border-right: none; }
+  .info-cell:nth-last-child(-n+2) { border-bottom: none; }
+  .info-label { font-size: 11px; color: var(--gray); margin-bottom: 4px; letter-spacing: 0.04em; }
+  .info-value { font-size: 14px; font-weight: 600; }
 
   /* FOOTER */
   footer {
@@ -189,10 +184,18 @@
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
-    .breadcrumb { padding: 90px 24px 0; }
-    .job-hero { padding: 20px 24px 40px; }
+    .sticky-bar { top: 57px; padding: 10px 20px; }
+    .sticky-bar-title { font-size: 12px; }
+    .sticky-btn-apply { padding: 8px 18px; font-size: 13px; }
+    .page-body { padding-top: 110px; }
+    .breadcrumb { padding: 16px 24px 0; }
+    .job-header { padding: 20px 24px 32px; }
     .divider { margin: 0 24px; }
-    .job-content { padding: 40px 24px 60px; grid-template-columns: 1fr; }
+    .job-content { padding: 36px 24px 80px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .info-cell { border-right: none; }
+    .info-cell:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+    .info-cell:last-child { border-bottom: none; }
     footer { flex-direction: column; text-align: center; }
   }
 </style>
@@ -211,42 +214,48 @@
   </div>
 </nav>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-  <a href="../">Home</a>
-  <span>›</span>
-  <a href="./">Careers</a>
-  <span>›</span>
-  Junior Sales Consultant
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <div class="sticky-bar-title">Junior Sales Consultant</div>
+  <a href="mailto:recruit-th@studist.co.th?subject=Application%3A%20Junior%20Sales%20Consultant&body=Your%20Name%3A%0APosition%20Applied%3A%20Junior%20Sales%20Consultant%0AMessage%3A" class="sticky-btn-apply">Apply Now</a>
 </div>
 
-<!-- HERO -->
-<div class="job-hero">
-  <div class="job-tag">Sales</div>
-  <h1>Junior Sales Consultant</h1>
-  <div class="job-meta">
-    <div class="job-meta-item">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Bangkok, Thailand
-    </div>
-    <div class="job-meta-item">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-      Full-time
-    </div>
-    <div class="job-meta-item">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      9:00 AM – 6:00 PM
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../">Home</a>
+    <span>›</span>
+    <a href="./">Careers</a>
+    <span>›</span>
+    Junior Sales Consultant
+  </div>
+
+  <!-- JOB HEADER -->
+  <div class="job-header">
+    <div class="job-tag">Sales</div>
+    <h1>Junior Sales Consultant</h1>
+    <div class="job-meta">
+      <div class="job-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Bangkok, Thailand
+      </div>
+      <div class="job-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        Full-time
+      </div>
+      <div class="job-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        9:00 AM – 6:00 PM
+      </div>
     </div>
   </div>
-</div>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-<!-- CONTENT -->
-<div class="job-content">
-
-  <!-- MAIN -->
-  <div class="job-main">
+  <!-- CONTENT -->
+  <div class="job-content">
 
     <section>
       <h2>Scope of Work</h2>
@@ -296,60 +305,46 @@
     </section>
 
     <section>
-      <h2>About Our Office</h2>
-      <p>952 Ramaland Building 13F, Rama IV Rd, Suriyawongse, Bang Rak, Bangkok</p>
-      <p style="color:var(--gray);font-size:13px;">BTS Saladaeng &nbsp;/&nbsp; MRT Silom</p>
+      <h2>Working Conditions &amp; Benefits</h2>
+      <div class="info-grid">
+        <div class="info-cell">
+          <div class="info-label">Location</div>
+          <div class="info-value">Bangkok, Thailand</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-label">Employment Type</div>
+          <div class="info-value">Full-time</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-label">Working Hours</div>
+          <div class="info-value">9:00 AM – 6:00 PM (1h break)</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-label">Holidays</div>
+          <div class="info-value">Sat, Sun &amp; Public Holidays</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-label">Annual Leave</div>
+          <div class="info-value">After 6 months (post probation)</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-label">Health Check</div>
+          <div class="info-value">Annual</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-label">Social Insurance</div>
+          <div class="info-value">Included</div>
+        </div>
+        <div class="info-cell">
+          <div class="info-label">Office</div>
+          <div class="info-value">Ramaland Bldg 13F, Bang Rak<br><span style="font-weight:400;font-size:12px;color:var(--gray);">BTS Saladaeng / MRT Silom</span></div>
+        </div>
+      </div>
     </section>
 
-  </div>
+  </div><!-- /.job-content -->
 
-  <!-- SIDEBAR -->
-  <div class="job-sidebar">
-    <div class="sidebar-card">
-      <h3>Job Details</h3>
-      <div class="sidebar-item">
-        <span class="sidebar-item-label">Location</span>
-        <span class="sidebar-item-value">Bangkok, Thailand</span>
-      </div>
-      <div class="sidebar-item">
-        <span class="sidebar-item-label">Type</span>
-        <span class="sidebar-item-value">Full-time</span>
-      </div>
-      <div class="sidebar-item">
-        <span class="sidebar-item-label">Working Hours</span>
-        <span class="sidebar-item-value">9:00 AM – 6:00 PM</span>
-      </div>
-      <div class="sidebar-item">
-        <span class="sidebar-item-label">Holidays</span>
-        <span class="sidebar-item-value">Sat, Sun &amp; Public Holidays</span>
-      </div>
-      <div class="sidebar-item">
-        <span class="sidebar-item-label">Annual Leave</span>
-        <span class="sidebar-item-value">After 6 months (post probation)</span>
-      </div>
-    </div>
-
-    <div class="sidebar-card">
-      <h3>Benefits</h3>
-      <div class="sidebar-item">
-        <span class="sidebar-item-label">Health Check</span>
-        <span class="sidebar-item-value">Annual</span>
-      </div>
-      <div class="sidebar-item">
-        <span class="sidebar-item-label">Social Insurance</span>
-        <span class="sidebar-item-value">Included</span>
-      </div>
-    </div>
-
-    <div class="apply-section">
-      <a href="mailto:recruit-th@studist.co.th?subject=Application%3A%20Junior%20Sales%20Consultant&body=Your%20Name%3A%0APosition%20Applied%3A%20Junior%20Sales%20Consultant%0AMessage%3A" class="btn-apply">
-        Apply Now
-      </a>
-      <p class="apply-note">recruit-th@studist.co.th<br>Attn: Shiomi</p>
-    </div>
-  </div>
-
-</div>
+</div><!-- /.page-body -->
 
 <!-- FOOTER -->
 <footer>
