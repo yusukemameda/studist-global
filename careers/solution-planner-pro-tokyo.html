@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solution Planner Professional (Tokyo) | Careers | Studist Global</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #111;
+    --gray: #666;
+    --light: #f5f5f5;
+    --border: #e0e0e0;
+    --accent: #0341B8;
+  }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--black);
+    background: #fff;
+    line-height: 1.7;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 48px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .logo { font-size: 18px; font-weight: 700; letter-spacing: 0.04em; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; font-size: 13px; color: var(--gray); align-items: center; }
+  .nav-links a:hover { color: var(--black); }
+  .nav-links .nav-active { color: var(--accent); font-weight: 600; }
+
+  /* JOB HERO */
+  .job-hero {
+    background: var(--light);
+    padding: 140px 24px 64px;
+  }
+  .job-hero-inner { max-width: 720px; margin: 0 auto; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; color: var(--gray);
+    margin-bottom: 32px;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--accent); }
+  .job-title {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .job-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+  .job-meta-tag {
+    font-size: 12px; padding: 4px 14px;
+    border-radius: 20px; background: #fff;
+    border: 1px solid var(--border); color: var(--gray);
+  }
+
+  /* JOB CONTENT */
+  .job-content { padding: 72px 24px 0; }
+  .job-section {
+    max-width: 720px; margin: 0 auto 52px;
+  }
+  .job-section h2 {
+    font-size: 17px; font-weight: 800;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 20px;
+  }
+  .job-section p {
+    font-size: 14px; color: var(--gray); line-height: 1.9;
+  }
+  .job-section ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .job-section ul li {
+    font-size: 14px; color: var(--gray);
+    display: flex; align-items: flex-start; gap: 10px; line-height: 1.7;
+  }
+  .job-section ul li::before {
+    content: '–'; color: var(--accent); font-weight: 700;
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* APPLY */
+  .apply-section {
+    max-width: 720px; margin: 0 auto;
+    padding: 48px 24px 100px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .apply-section p { font-size: 14px; color: var(--gray); }
+  .apply-btn {
+    display: inline-block; padding: 14px 40px;
+    background: var(--accent); color: #fff;
+    border-radius: 4px; font-size: 14px; font-weight: 700;
+    transition: background 0.2s;
+  }
+  .apply-btn:hover { background: #1344b5; }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 48px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: var(--gray);
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    footer { flex-direction: column; text-align: center; }
+    .apply-section { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="../">Studist<span>.</span> Global</a>
+  <div class="nav-links">
+    <a href="../#about">About</a>
+    <a href="../#product">Product</a>
+    <a href="../#subsidiaries">Subsidiaries</a>
+    <a href="../#contact">Contact</a>
+    <a href="./" class="nav-active">Careers</a>
+  </div>
+</nav>
+
+<!-- JOB HERO -->
+<section class="job-hero">
+  <div class="job-hero-inner">
+    <a href="./" class="back-link">← Back to Careers</a>
+    <h1 class="job-title">Solution Planner Professional (Tokyo)</h1>
+    <div class="job-meta">
+      <span class="job-meta-tag">Sales</span>
+      <span class="job-meta-tag">Tokyo, Japan</span>
+      <span class="job-meta-tag">Full-time</span>
+    </div>
+  </div>
+</section>
+
+<!-- JOB CONTENT -->
+<div class="job-content">
+
+  <div class="job-section">
+    <h2>Overview</h2>
+    <p>The Solution Planner Professional role is designed for seasoned sales professionals who want to drive strategic, high-value deals. You will lead enterprise-level engagements with major Japanese corporations operating across ASEAN, acting as a trusted advisor on operational transformation. This role requires deep consultative skills, the ability to navigate complex organizations, and a passion for building long-term partnerships.</p>
+  </div>
+
+  <div class="job-section">
+    <h2>Responsibilities</h2>
+    <ul>
+      <li>Own a portfolio of strategic enterprise accounts and new business targets with significant ASEAN operations</li>
+      <li>Lead executive-level discovery sessions to understand operational challenges at depth</li>
+      <li>Design and deliver comprehensive solution proposals involving multi-site, multi-language Teachme Biz deployments</li>
+      <li>Drive complex, multi-stakeholder deal cycles from initial engagement through legal, procurement, and IT approval</li>
+      <li>Develop and execute account expansion strategies post-close</li>
+      <li>Mentor junior Solution Planners and contribute to team best practices</li>
+      <li>Represent Studist Global at industry events and customer forums</li>
+    </ul>
+  </div>
+
+  <div class="job-section">
+    <h2>Requirements</h2>
+    <ul>
+      <li>Native or business-level Japanese (required)</li>
+      <li>Business-level English (required)</li>
+      <li>5+ years of enterprise B2B sales experience; SaaS, ERP, or operations technology preferred</li>
+      <li>Proven track record of consistently achieving or exceeding quota</li>
+      <li>Strong executive presence with experience engaging C-suite and VP-level buyers</li>
+      <li>Excellent written and verbal communication skills in both Japanese and English</li>
+    </ul>
+  </div>
+
+  <div class="job-section">
+    <h2>Nice to Have</h2>
+    <ul>
+      <li>Deep knowledge of manufacturing, logistics, supply chain, or retail industries</li>
+      <li>Prior experience selling into Japanese companies with ASEAN operations</li>
+      <li>Familiarity with Salesforce or similar CRM platforms</li>
+      <li>Thai or Vietnamese language ability</li>
+    </ul>
+  </div>
+
+  <div class="job-section">
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Senior-level compensation package: competitive base + uncapped performance bonus</li>
+      <li>Hybrid work — flexible arrangement for experienced hires</li>
+      <li>Direct access to executive leadership and strategic decision-making</li>
+      <li>International team across Japan, Thailand, and Vietnam</li>
+      <li>Company-sponsored visits to our ASEAN offices</li>
+      <li>Full social insurance, commuter allowance, 20+ days annual leave</li>
+    </ul>
+  </div>
+
+  <div class="apply-section">
+    <p>Interested? Send us your resume and a short note about yourself.</p>
+    <a href="mailto:careers@studist.co.th?subject=Application: Solution Planner Professional (Tokyo)" class="apply-btn">Apply Now</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>&copy; 2026 Studist Corporation. All rights reserved.</div>
+  <div>Studist (Thailand) Co., Ltd. &nbsp;|&nbsp; Studist (Vietnam) Co., Ltd.</div>
+</footer>
+
+</body>
+</html>
