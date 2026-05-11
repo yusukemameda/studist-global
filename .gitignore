@@ -1,0 +1,26 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Secrets / Environment
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json
+
+# Claude Code worktrees
+.claude/worktrees/
+
+# Node / build artifacts (just in case)
+node_modules/
+dist/
+build/
+*.log
