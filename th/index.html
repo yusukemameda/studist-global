@@ -226,7 +226,7 @@
   }
   .product-link:hover { background: var(--accent); color: #fff; }
   .product-visual {
-    background: linear-gradient(135deg, #e8efff 0%, #dbeafe 100%);
+    background: #f4f6f8;
     border-radius: 8px; height: 240px;
     display: flex; align-items: center; justify-content: center;
   }
@@ -252,6 +252,8 @@
   .value-card-img {
     width: 100%; height: 100%;
     object-fit: contain; display: block;
+    transform: scale(var(--vimg-scale, 1));
+    transform-origin: center;
   }
   .value-card-body {
     padding: 32px;
@@ -391,7 +393,7 @@
     <h2 class="section-title">ค่านิยมหลักของเรา</h2>
     <div class="value-grid">
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.40"></div>
         <div class="value-card-body">
           <h3>With the customer</h3>
           <h4>ก้าวเข้าหาลูกค้า</h4>
@@ -399,7 +401,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.12"></div>
         <div class="value-card-body">
           <h3>Try first</h3>
           <h4>ถ้าไม่แน่ใจ ลองดูก่อน</h4>
@@ -407,7 +409,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.13"></div>
         <div class="value-card-body">
           <h3>Beyond team</h3>
           <h4>ก้าวข้ามขอบเขตของทีม</h4>
@@ -415,7 +417,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.00"></div>
         <div class="value-card-body">
           <h3>Be Study + ist</h3>
           <h4>เรียนรู้และเติบโตอยู่เสมอ</h4>
@@ -450,6 +452,52 @@
       </div>
       <div class="product-visual">
         <img src="../teachmebiz.webp" alt="Teachme Biz" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Process</h3>
+        <p>ผลิตภัณฑ์ที่เปลี่ยน "กระบวนการทำงาน" ที่ซับซ้อนให้เป็น "แผนที่" ที่ทุกคนเข้าใจได้ด้วย AI แบบสนทนา ช่วยให้เห็นภาพรวมของงานซึ่งอยู่เหนือคู่มือ (ขั้นตอน) แต่ละชิ้น และด้วย 3 คุณค่า — วาดได้ เชื่อมโยงได้ ปรับปรุงได้ — สนับสนุนการกำหนดมาตรฐานและการปรับปรุงงานที่พึ่งพาตัวบุคคล</p>
+        <ul class="feature-list">
+          <li>วาดภาพรวมของกระบวนการทำงานได้ เพียงป้อนเอกสารหรือสนทนากับ AI</li>
+          <li>สลับมุมมองแบบโฟลวชาร์ต รายการ และสวิมเลน ได้ในคลิกเดียว</li>
+          <li>เชื่อมแต่ละขั้นตอนเข้ากับคู่มือ Teachme Biz เวลามาตรฐาน แผนกรับผิดชอบ และปริมาณงาน</li>
+          <li>AI เสนอว่าควร "ทำอัตโนมัติ / จ้างภายนอก / ให้คนทำเท่านั้น" (Routing)</li>
+          <li>สร้างรายงานข้อเสนอเพื่อเพิ่มประสิทธิภาพงานอัตโนมัติ พร้อมแนวทาง ลำดับความสำคัญ และมาตรการที่เป็นรูปธรรม</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmeprocess.png" alt="Teachme Process" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Communication</h3>
+        <p>ผลิตภัณฑ์ที่เปลี่ยนการสื่อสารในแต่ละวันให้เป็นสินทรัพย์ที่ช่วยหน้างาน โดยข้ามกำแพงภาษา ด้วยการแปลแบบเรียลไทม์ด้วย AI ขจัดกำแพงภาษา เพื่อให้การแบ่งปันความรู้และการส่งต่อข้อมูลในแต่ละวันไม่สะดุด แม้ในหน้างานที่มีหลายสัญชาติและหลายช่วงวัย</p>
+        <ul class="feature-list">
+          <li>เชื่อมต่อหน้างานหลายภาษาอย่างไร้รอยต่อด้วยแชตแปลอัตโนมัติแบบเรียลไทม์ด้วย AI</li>
+          <li>ฟังก์ชันรายงานประจำวันที่ AI จัดรูปแบบจากสิ่งที่คุณพูดให้อัตโนมัติ (พร้อมแปลและสรุป)</li>
+          <li>ขจัดการพึ่งพาตัวบุคคลด้วย Know Who ที่ตอบได้ว่า "ใครเชี่ยวชาญเครื่องจักรนี้?"</li>
+          <li>เปลี่ยนความรู้และวิธีแก้ปัญหาของผู้เชี่ยวชาญให้เป็นสินทรัพย์ เพื่อสร้างผลงานสูงสุดด้วยคนที่น้อยลง</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmecommunication.png" alt="Teachme Communication" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme MySkill</h3>
+        <p>ฐาน "การเติบโต" ของบุคลากรที่กระตุ้นการพัฒนาทักษะด้วยตนเอง ด้วยการทำให้การพัฒนาทักษะเป็น "เกม" สร้างสภาวะที่หน้างานเรียนรู้ด้วยตนเองอย่างต่อเนื่องโดยไม่ต้องให้สำนักงานใหญ่หรือหัวหน้าคอยกระตุ้น สนับสนุนการสร้างกำลังคนพร้อมใช้งานของพนักงานใหม่และพนักงานต่างชาติ และเพิ่มอัตราการรักษาพนักงาน</p>
+        <ul class="feature-list">
+          <li>ส่งเสริมการได้มาซึ่งทักษะด้วยการแสดงทักษะของฉัน (My Skill), My Quest และ EXP / การเลื่อนระดับ</li>
+          <li>ดูสถานะความชำนาญได้ในพริบตาด้วยสกิลแมปแยกตามองค์กรและสาขา (ส่งออก CSV ได้)</li>
+          <li>บริหารจัดการคุณวุฒิระดับชาติและภายนอก เช่น ผู้ควบคุมสุขลักษณะอาหาร ในที่เดียว</li>
+          <li>AI วิเคราะห์ระดับความชำนาญและแนะนำทักษะถัดไปที่ควรเรียนแบบเฉพาะบุคคล</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmemyskill.png" alt="Teachme MySkill" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
       </div>
     </div>
   </div>

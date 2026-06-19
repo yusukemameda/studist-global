@@ -226,7 +226,7 @@
   }
   .product-link:hover { background: var(--accent); color: #fff; }
   .product-visual {
-    background: linear-gradient(135deg, #e8efff 0%, #dbeafe 100%);
+    background: #f4f6f8;
     border-radius: 8px; height: 240px;
     display: flex; align-items: center; justify-content: center;
   }
@@ -252,6 +252,8 @@
   .value-card-img {
     width: 100%; height: 100%;
     object-fit: contain; display: block;
+    transform: scale(var(--vimg-scale, 1));
+    transform-origin: center;
   }
   .value-card-body {
     padding: 32px;
@@ -391,7 +393,7 @@
     <h2 class="section-title">Our Core Values</h2>
     <div class="value-grid">
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.40"></div>
         <div class="value-card-body">
           <h3>With the customer</h3>
           <h4>Dive into your customers</h4>
@@ -399,7 +401,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.12"></div>
         <div class="value-card-body">
           <h3>Try first</h3>
           <h4>If you're unsure, just try</h4>
@@ -407,7 +409,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.13"></div>
         <div class="value-card-body">
           <h3>Beyond team</h3>
           <h4>Go beyond your team</h4>
@@ -415,7 +417,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.00"></div>
         <div class="value-card-body">
           <h3>Be Study + ist</h3>
           <h4>Keep learning and growing</h4>
@@ -450,6 +452,52 @@
       </div>
       <div class="product-visual">
         <img src="../teachmebiz.webp" alt="Teachme Biz" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Process</h3>
+        <p>A product that turns complex "business processes" into an easy-to-understand "map" through conversational AI. It visualizes the big picture that sits above individual manuals (procedures), and with three values—draw it, connect it, improve it—supports the standardization and improvement of work that has become person-dependent.</p>
+        <ul class="feature-list">
+          <li>Draw the full picture of any business process just by feeding documents or chatting with AI</li>
+          <li>Switch between flowchart, list, and swimlane views with a single click</li>
+          <li>Link each step to Teachme Biz manuals, standard times, departments, and workloads</li>
+          <li>AI suggests what to automate, what to outsource, and what only people should do (Routing)</li>
+          <li>Auto-generate an efficiency-improvement report with direction, priorities, and concrete actions</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmeprocess.png" alt="Teachme Process" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Communication</h3>
+        <p>A product that turns everyday communication into an asset that helps the front line, beyond language barriers. AI real-time translation removes the language wall so that knowledge sharing and daily information flow never stall—even in multinational, multi-generational workplaces.</p>
+        <ul class="feature-list">
+          <li>Connect multilingual workplaces seamlessly with AI real-time translation chat</li>
+          <li>Daily reports that AI auto-formats from what you say (with translation and summary)</li>
+          <li>Resolve person-dependency with Know Who, answering "Who knows this machine well?"</li>
+          <li>Turn veterans' know-how and troubleshooting into assets to maximize output with fewer people</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmecommunication.png" alt="Teachme Communication" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme MySkill</h3>
+        <p>A talent "growth" platform that encourages self-driven skill development. By "gamifying" skill-up, it creates a state where the front line keeps learning on its own—without pressure from headquarters or supervisors—supporting faster onboarding of new and foreign staff and higher retention.</p>
+        <ul class="feature-list">
+          <li>Promote skill acquisition with My Skill visualization, My Quests, and EXP / rank-ups</li>
+          <li>View proficiency at a glance with skill maps by organization and store (CSV export)</li>
+          <li>Manage national and external qualifications such as food-hygiene supervisor in one place</li>
+          <li>AI analyzes proficiency and personally suggests the next skill to learn</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmemyskill.png" alt="Teachme MySkill" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
       </div>
     </div>
   </div>

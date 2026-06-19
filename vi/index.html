@@ -226,7 +226,7 @@
   }
   .product-link:hover { background: var(--accent); color: #fff; }
   .product-visual {
-    background: linear-gradient(135deg, #e8efff 0%, #dbeafe 100%);
+    background: #f4f6f8;
     border-radius: 8px; height: 240px;
     display: flex; align-items: center; justify-content: center;
   }
@@ -252,6 +252,8 @@
   .value-card-img {
     width: 100%; height: 100%;
     object-fit: contain; display: block;
+    transform: scale(var(--vimg-scale, 1));
+    transform-origin: center;
   }
   .value-card-body {
     padding: 32px;
@@ -391,7 +393,7 @@
     <h2 class="section-title">Giá trị cốt lõi của chúng tôi</h2>
     <div class="value-grid">
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.40"></div>
         <div class="value-card-body">
           <h3>With the customer</h3>
           <h4>Lao vào khách hàng</h4>
@@ -399,7 +401,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.12"></div>
         <div class="value-card-body">
           <h3>Try first</h3>
           <h4>Nếu không chắc, hãy thử</h4>
@@ -407,7 +409,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.13"></div>
         <div class="value-card-body">
           <h3>Beyond team</h3>
           <h4>Vượt ra ngoài ranh giới nhóm</h4>
@@ -415,7 +417,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="../04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.00"></div>
         <div class="value-card-body">
           <h3>Be Study + ist</h3>
           <h4>Tiếp tục học hỏi và phát triển</h4>
@@ -450,6 +452,52 @@
       </div>
       <div class="product-visual">
         <img src="../teachmebiz.webp" alt="Teachme Biz" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Process</h3>
+        <p>Sản phẩm biến "quy trình kinh doanh" phức tạp thành "bản đồ" mà ai cũng hiểu được bằng AI hội thoại. Trực quan hóa bức tranh tổng thể nằm trên các tài liệu hướng dẫn (quy trình) riêng lẻ, và với 3 giá trị — vẽ được, kết nối được, cải thiện được — hỗ trợ chuẩn hóa và cải thiện những công việc đang phụ thuộc vào cá nhân.</p>
+        <ul class="feature-list">
+          <li>Vẽ bức tranh tổng thể của quy trình chỉ bằng cách nạp tài liệu hoặc trò chuyện với AI</li>
+          <li>Chuyển đổi giữa dạng lưu đồ, danh sách và swimlane chỉ với một cú nhấp</li>
+          <li>Liên kết từng bước với tài liệu Teachme Biz, thời gian chuẩn, bộ phận phụ trách và khối lượng công việc</li>
+          <li>AI đề xuất việc nào nên "tự động hóa / thuê ngoài / chỉ con người làm" (Routing)</li>
+          <li>Tự động tạo báo cáo đề xuất nâng cao hiệu quả với phương hướng, mức ưu tiên và giải pháp cụ thể</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmeprocess.png" alt="Teachme Process" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Communication</h3>
+        <p>Sản phẩm biến những trao đổi hằng ngày thành tài sản hỗ trợ hiện trường, vượt qua rào cản ngôn ngữ. Với dịch thuật thời gian thực bằng AI, xóa bỏ bức tường ngôn ngữ để việc chia sẻ tri thức và truyền đạt thông tin hằng ngày không bị gián đoạn — ngay cả tại hiện trường đa quốc tịch, đa thế hệ.</p>
+        <ul class="feature-list">
+          <li>Kết nối liền mạch các hiện trường đa ngôn ngữ bằng chat dịch tự động thời gian thực bằng AI</li>
+          <li>Chức năng nhật báo được AI tự động định dạng từ nội dung bạn nói (kèm dịch và tóm tắt)</li>
+          <li>Xóa bỏ sự phụ thuộc cá nhân với Know Who, trả lời "Ai rành máy này?"</li>
+          <li>Biến tri thức và cách xử lý sự cố của người kỳ cựu thành tài sản, tối đa hóa thành quả với ít người hơn</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmecommunication.png" alt="Teachme Communication" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme MySkill</h3>
+        <p>Nền tảng "tăng trưởng" nhân lực thúc đẩy nâng cao kỹ năng một cách tự chủ. Bằng cách "trò chơi hóa" việc nâng cao kỹ năng, tạo ra trạng thái hiện trường tự học hỏi liên tục mà không cần trụ sở hay cấp trên thúc giục — hỗ trợ sớm đưa nhân viên mới và nhân viên nước ngoài vào thực chiến, đồng thời nâng cao tỷ lệ giữ chân.</p>
+        <ul class="feature-list">
+          <li>Thúc đẩy tiếp nhận kỹ năng với trực quan hóa My Skill, My Quest và EXP / thăng hạng</li>
+          <li>Xem tình trạng thành thạo trong nháy mắt bằng bản đồ kỹ năng theo tổ chức và cửa hàng (xuất CSV)</li>
+          <li>Quản lý chứng chỉ quốc gia và bên ngoài như giám sát vệ sinh thực phẩm tại một nơi</li>
+          <li>AI phân tích mức độ thành thạo và đề xuất cá nhân hóa kỹ năng tiếp theo nên học</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="../teachmemyskill.png" alt="Teachme MySkill" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
       </div>
     </div>
   </div>
