@@ -226,7 +226,7 @@
   }
   .product-link:hover { background: var(--accent); color: #fff; }
   .product-visual {
-    background: linear-gradient(135deg, #e8efff 0%, #dbeafe 100%);
+    background: #f4f6f8;
     border-radius: 8px; height: 240px;
     display: flex; align-items: center; justify-content: center;
   }
@@ -252,6 +252,8 @@
   .value-card-img {
     width: 100%; height: 100%;
     object-fit: contain; display: block;
+    transform: scale(var(--vimg-scale, 1));
+    transform-origin: center;
   }
   .value-card-body {
     padding: 32px;
@@ -395,7 +397,7 @@
     <h2 class="section-title">私たちの行動指針</h2>
     <div class="value-grid">
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.40"></div>
         <div class="value-card-body">
           <h3>With the customer</h3>
           <h4>顧客に飛び込もう</h4>
@@ -403,7 +405,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.12"></div>
         <div class="value-card-body">
           <h3>Try first</h3>
           <h4>悩むなら、やってみよう</h4>
@@ -411,7 +413,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.13"></div>
         <div class="value-card-body">
           <h3>Beyond team</h3>
           <h4>チームの枠を越えよう</h4>
@@ -419,7 +421,7 @@
         </div>
       </div>
       <div class="value-card">
-        <div class="value-card-img-wrap"><img src="04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889"></div>
+        <div class="value-card-img-wrap"><img src="04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.00"></div>
         <div class="value-card-body">
           <h3>Be Study + ist</h3>
           <h4>学び、成長し続けよう</h4>
@@ -454,6 +456,52 @@
       </div>
       <div class="product-visual">
         <img src="teachmebiz.webp" alt="Teachme Biz" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Process</h3>
+        <p>複雑な「業務プロセス」を、対話型AIで誰でもわかる「地図」に変えるプロダクト。マニュアル（手順）の上位概念である業務の全体像を可視化し、「描ける・繋がる・改善できる」の3つの価値で、属人化した業務の標準化と改善を後押しします。</p>
+        <ul class="feature-list">
+          <li>資料の読み込みかAIとの対話だけで、誰でも業務プロセスの全体像を描ける</li>
+          <li>フローチャート／リスト／スイムレーンの3形式をワンクリックで切り替え</li>
+          <li>各工程にTeachme Bizのマニュアル・標準時間・担当部署・工数を紐づけ</li>
+          <li>「自動化・外注すべき業務」「人にしかできない業務」をAIが提案（Routing）</li>
+          <li>改善方針・優先度・具体施策をまとめた業務効率化提案レポートを自動生成</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="teachmeprocess.png" alt="Teachme Process" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme Communication</h3>
+        <p>日々のやり取りを、言語を超えて現場を助ける資産に変えるプロダクト。AIによるリアルタイム翻訳で言葉の壁を解消し、多国籍・多世代の現場でも、知見の共有と日々の情報伝達を滞らせません。</p>
+        <ul class="feature-list">
+          <li>AIリアルタイム自動翻訳チャットで、多言語の現場をシームレスに接続</li>
+          <li>話した内容をAIがテンプレートへ自動整形する日報（自動翻訳・要約つき）</li>
+          <li>「この機械に詳しい人は？」に答える Know Who で属人化を解消</li>
+          <li>ベテランの知見・トラブル対応策を資産化し、少人数でも成果を最大化</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="teachmecommunication.png" alt="Teachme Communication" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <h3>Teachme MySkill</h3>
+        <p>自律的なスキルアップを促す、人材"成長"基盤。スキルアップを"ゲーム化"する仕掛けで、本部や上長が促さずとも現場が自ら学び続ける状態をつくり、新人・外国人材の即戦力化と定着率の向上を支援します。</p>
+        <ul class="feature-list">
+          <li>マイスキル可視化・マイクエスト・EXP／ランクアップで習得を促進</li>
+          <li>組織別・店舗別のスキルマップで習熟状況を一覧（CSV出力可）</li>
+          <li>食品衛生責任者など国家資格・外部資格もまとめて管理</li>
+          <li>AIが習熟度を分析し、次に学ぶべきスキルをパーソナライズ提案</li>
+        </ul>
+      </div>
+      <div class="product-visual">
+        <img src="teachmemyskill.png" alt="Teachme MySkill" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
       </div>
     </div>
   </div>
