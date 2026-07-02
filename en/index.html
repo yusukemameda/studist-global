@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <title>Studist (Thailand) Co., Ltd. | Studist (Vietnam) Co., Ltd.</title>
 <meta name="description" content="This is the corporate website of Studist (Thailand) Co., Ltd. and Studist (Vietnam) Co., Ltd. Our mission is &quot;Transform the way we work and shape the future through operations.&quot; We support lean operations for businesses and aim to realize a society full of intellectual vitality.">
 <link rel="canonical" href="https://studist.co.th/en/">
@@ -15,297 +15,210 @@
 <meta property="og:image" content="https://studist.co.th/ogp_studist.webp">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Studist Global",
-  "url": "https://studist.co.th/",
-  "logo": "https://studist.co.th/ogp_studist.webp",
-  "description": "Studist Global supports operational excellence across ASEAN through Teachme Biz — a visual manual SaaS platform for businesses in Thailand and Vietnam.",
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "Studist Corporation",
-    "url": "https://studist.jp"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bangkok",
-    "addressCountry": "TH"
-  }
-}
-</script>
-<!-- hreflang: update base URL if you have a custom domain -->
 <link rel="alternate" hreflang="ja"        href="https://studist.co.th/">
 <link rel="alternate" hreflang="en"        href="https://studist.co.th/en/">
 <link rel="alternate" hreflang="th"        href="https://studist.co.th/th/">
 <link rel="alternate" hreflang="vi"        href="https://studist.co.th/vi/">
 <link rel="alternate" hreflang="x-default" href="https://studist.co.th/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --black: #111;
-    --gray: #666;
-    --light: #f5f5f5;
-    --border: #e0e0e0;
-    --accent: #0341B8;
+    --navy:   #0C1E3E;
+    --navy-2: #13294F;
+    --navy-900:#081124;
+    --tint-nv:#8FB0E8;
+    --ink:    #131720;
+    --muted:  #5A6473;
+    --on-navy-dim: #A9B7CE;
+    --line:   #E7EAEE;
+    --tint:   #F5F7FB;
+    --paper:  #FFFFFF;
   }
+  html { scroll-behavior: smooth; }
   body {
-    font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Yu Gothic', sans-serif;
-    color: var(--black);
-    background: #fff;
-    line-height: 1.7;
+    font-family: 'Noto Sans JP', system-ui, sans-serif;
+    color: var(--ink); background: var(--paper); line-height: 1.75;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
   }
   a { color: inherit; text-decoration: none; }
+  .mono { font-family: 'Noto Sans Mono', monospace; }
 
   /* NAV */
   nav {
-    position: fixed; top: 0; left: 0; right: 0;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
-    padding: 20px 48px;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-    z-index: 100;
+    padding: 22px 40px; border-bottom: 1px solid transparent;
+    transition: background .35s ease, border-color .35s ease, padding .35s ease;
   }
-  .logo { font-size: 18px; font-weight: 700; letter-spacing: 0.04em; }
-  .logo span { color: var(--accent); }
-  .nav-right { display: flex; align-items: center; gap: 24px; }
-  .nav-links { display: flex; gap: 32px; font-size: 13px; color: var(--gray); }
-  .nav-links a:hover { color: var(--black); }
-  .lang-switcher { display: flex; gap: 4px; }
+  nav .logo { font-size: 17px; font-weight: 700; letter-spacing: .01em; color: #fff; transition: color .35s; }
+  nav .logo span { color: var(--tint-nv); }
+  nav .nav-right { display: flex; align-items: center; gap: 28px; }
+  nav .nav-links { display: flex; gap: 30px; }
+  nav .nav-links a {
+    font-family: 'Noto Sans Mono', monospace; font-size: 12px; letter-spacing: .04em;
+    color: rgba(255,255,255,.72); transition: color .2s;
+  }
+  nav .nav-links a:hover { color: #fff; }
+  .lang-switcher { display: flex; gap: 2px; }
   .lang-btn {
-    display: inline-block;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
-    padding: 4px 9px; border-radius: 4px; cursor: pointer;
-    border: 1px solid var(--border); color: var(--gray); background: none;
-    transition: background 0.15s, color 0.15s, border-color 0.15s;
-    font-family: inherit;
+    font-family: 'Noto Sans Mono', monospace; font-size: 11px; letter-spacing: .06em;
+    padding: 4px 8px; color: rgba(255,255,255,.6);
+    border: 1px solid rgba(255,255,255,.22); border-radius: 2px; transition: .2s;
   }
-  .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .lang-btn:hover { color: #fff; border-color: rgba(255,255,255,.5); }
+  .lang-btn.active { color: var(--navy); background: #fff; border-color: #fff; }
+  nav.scrolled { background: rgba(255,255,255,.94); backdrop-filter: blur(10px); border-bottom-color: var(--line); padding: 14px 40px; }
+  nav.scrolled .logo { color: var(--navy); }
+  nav.scrolled .nav-links a { color: var(--muted); }
+  nav.scrolled .nav-links a:hover { color: var(--navy); }
+  nav.scrolled .lang-btn { color: var(--muted); border-color: var(--line); }
+  nav.scrolled .lang-btn:hover { color: var(--navy); border-color: var(--navy); }
+  nav.scrolled .lang-btn.active { color: #fff; background: var(--navy); border-color: var(--navy); }
 
   /* HERO */
   .hero {
-    aspect-ratio: 16 / 9;
-    position: relative; overflow: hidden;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    text-align: center;
-    padding: 24px;
-    background: #fff;
-    margin-top: 65px;
+    position: relative; background: var(--navy); color: #fff;
+    min-height: 92vh; display: flex; align-items: center; overflow: hidden;
   }
-  .hero-cover {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    opacity: 0.35;
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+  .hero-scrim { position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(90deg, rgba(12,30,62,.90) 0%, rgba(12,30,62,.80) 34%, rgba(12,30,62,.52) 68%, rgba(12,30,62,.36) 100%); }
+  .hero-left { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 120px 64px 96px 40px; max-width: 760px; width: 100%; }
+  .hero .kicker {
+    font-family: 'Noto Sans Mono', monospace; font-size: 12px; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--tint-nv); margin-bottom: 30px;
+    display: flex; align-items: center; gap: 14px;
   }
-  .hero-content {
-    position: relative; z-index: 1;
-  }
-  .hero h1 {
-    font-size: clamp(36px, 6vw, 72px);
-    font-weight: 800; letter-spacing: -0.02em;
-    line-height: 1.15; margin-bottom: 0;
-  }
-  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero .kicker::before { content:''; width: 34px; height: 1px; background: var(--tint-nv); opacity: .7; }
+  .hero h1 { font-weight: 900; font-size: clamp(44px, 6.2vw, 86px); line-height: 1.04; letter-spacing: -.03em; margin-bottom: 30px; }
+  .hero h1 span { color: var(--tint-nv); }
+  .hero-sub { font-size: 16px; line-height: 1.95; color: var(--on-navy-dim); max-width: 32em; }
+  .hero-meta { margin-top: 48px; display: flex; gap: 40px; font-family: 'Noto Sans Mono', monospace; font-size: 12px; letter-spacing: .04em; color: rgba(255,255,255,.55); }
+  .hero-meta b { display: block; color: #fff; font-weight: 500; font-size: 15px; margin-top: 4px; letter-spacing: 0; }
 
   /* SECTION BASE */
-  section { padding: 100px 24px; }
-  .section-inner { max-width: 1000px; margin: 0 auto; }
-  .section-label {
-    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gray); margin-bottom: 16px;
+  section.block { padding: 128px 40px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .eyebrow {
+    font-family: 'Noto Sans Mono', monospace; font-size: 12px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 12px; margin-bottom: 26px;
   }
-  .section-title {
-    font-size: clamp(28px, 4vw, 42px); font-weight: 800;
-    letter-spacing: -0.02em; margin-bottom: 16px;
-  }
-  .title-ja { font-size: 0.78em; }
-  .section-sub { font-size: 15px; color: var(--gray); max-width: 100%; }
+  .eyebrow .idx { color: var(--navy); font-weight: 500; }
+  .eyebrow::after { content:''; flex: 0 0 40px; height: 1px; background: var(--line); }
+  .s-title { font-weight: 900; font-size: clamp(28px, 3.4vw, 42px); letter-spacing: -.02em; line-height: 1.35; color: var(--navy); max-width: 22em; }
+  .s-sub { font-size: 15px; color: var(--muted); margin-top: 18px; line-height: 1.9; max-width: 40em; }
+
+  .dark { background: var(--navy); color: #fff; }
+  .dark .eyebrow { color: var(--on-navy-dim); }
+  .dark .eyebrow .idx { color: #fff; }
+  .dark .eyebrow::after { background: rgba(255,255,255,.2); }
+  .dark .s-title { color: #fff; }
+  .dark .s-sub { color: var(--on-navy-dim); }
 
   /* ABOUT */
-  .about { background: var(--light); }
-  #subsidiaries { background: var(--light); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-    margin-top: 56px; align-items: start;
-  }
-  .about-text h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
-  .about-text p { font-size: 14px; color: var(--gray); line-height: 1.8; }
-  .about-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-  }
-  .stat {
-    background: #fff; border: 1px solid var(--border);
-    padding: 28px 24px; border-radius: 8px;
-  }
-  .stat-num {
-    font-size: 36px; font-weight: 800; letter-spacing: -0.02em;
-    color: var(--accent); line-height: 1;
-  }
-  .stat-unit { font-size: 18px; font-weight: 800; }
-  .stat-label { font-size: 12px; color: var(--gray); margin-top: 6px; }
+  .about .lead { font-size: 17px; line-height: 2.05; color: #37414F; max-width: 42em; margin-top: 30px; }
+  .about-2col { display: grid; grid-template-columns: .85fr 1.15fr; gap: 72px; margin-top: 76px; align-items: start; }
+  .about-2col h3 { font-size: 21px; font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.5; }
+  .about-2col > div:first-child p { font-size: 14.5px; color: var(--muted); line-height: 2; }
+  .stats { border-top: 1px solid var(--navy); }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; }
+  .stat { padding: 30px 8px 30px 0; border-bottom: 1px solid var(--line); }
+  .stat:nth-child(odd) { border-right: 1px solid var(--line); padding-right: 28px; }
+  .stat:nth-child(even) { padding-left: 28px; }
+  .stat-num { font-weight: 900; font-size: 46px; line-height: 1; letter-spacing: -.03em; color: var(--navy); display: flex; align-items: baseline; gap: 4px; }
+  .stat-num .u { font-size: 17px; font-weight: 700; }
+  .stat-label { font-family: 'Noto Sans Mono', monospace; font-size: 11.5px; letter-spacing: .03em; color: var(--muted); margin-top: 12px; line-height: 1.6; }
 
-  /* MISSION VISION */
-  .mv { background: #fff; }
-  .mv-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-    margin-top: 56px;
-  }
-  .mv-block { border-left: 3px solid var(--accent); padding-left: 28px; }
-  .mv-block h3 {
-    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 20px;
-  }
-  .mv-subtitle {
-    font-size: 13px; color: var(--gray); margin-bottom: 8px;
-  }
-  .mv-catch {
-    font-size: 22px; font-weight: 700; line-height: 1.5;
-    color: var(--black); margin-bottom: 16px; letter-spacing: -0.01em;
-  }
-  .mv-block small {
-    font-size: 13px; color: var(--gray); line-height: 1.8; display: block;
-  }
-  @media (max-width: 768px) {
-    .mv-grid { grid-template-columns: 1fr; }
-  }
-
-  /* SUBSIDIARIES */
-  .sub-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
-    margin-top: 56px;
-  }
-  .sub-card {
-    border: 1px solid var(--border); border-radius: 12px;
-    padding: 40px 36px; transition: 0.2s;
-  }
-  .sub-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
-  .sub-flag { font-size: 36px; margin-bottom: 20px; }
-  .sub-name { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
-  .sub-name-ja { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
-  .sub-divider { height: 1px; background: var(--border); margin: 20px 0; }
-  .sub-info { display: flex; flex-direction: column; gap: 10px; }
-  .sub-info-row { display: flex; gap: 12px; font-size: 13px; }
-  .sub-info-label { color: var(--gray); min-width: 80px; }
-  .sub-info-val { font-weight: 500; }
-  .sub-tag {
-    display: inline-block; margin-top: 20px;
-    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-    background: #e8efff; color: var(--accent);
-    padding: 4px 12px; border-radius: 20px;
-  }
-
-  /* PRODUCT */
-  .product { background: #fff; }
-  .product-card {
-    background: #fff; border: 1px solid var(--border);
-    border-radius: 12px; padding: 48px;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-    align-items: center; margin-top: 56px;
-  }
-  .product-card h3 {
-    font-size: 32px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.02em;
-  }
-  .product-card p { font-size: 14px; color: var(--gray); line-height: 1.8; margin-bottom: 24px; }
-  .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .feature-list li {
-    font-size: 13px; display: flex; align-items: center; gap: 10px;
-  }
-  .feature-list li::before {
-    content: '✓'; color: var(--accent); font-weight: 700; font-size: 14px;
-  }
-  .product-links { display: flex; gap: 12px; margin-top: 24px; }
-  .product-link {
-    display: inline-block; padding: 8px 20px;
-    border: 1.5px solid var(--accent); border-radius: 6px;
-    font-size: 13px; font-weight: 600; color: var(--accent);
-    transition: background 0.2s, color 0.2s;
-  }
-  .product-link:hover { background: var(--accent); color: #fff; }
-  .product-visual {
-    background: #f4f6f8;
-    border-radius: 8px; height: 240px;
-    display: flex; align-items: center; justify-content: center;
-  }
+  /* MISSION / VISION */
+  .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 72px; }
+  .mv-block { border-top: 1px solid rgba(255,255,255,.22); padding-top: 32px; }
+  .mv-label { font-family: 'Noto Sans Mono', monospace; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--tint-nv); margin-bottom: 18px; }
+  .mv-sub { font-size: 13px; color: var(--on-navy-dim); margin-bottom: 10px; }
+  .mv-catch { font-size: 24px; font-weight: 700; line-height: 1.55; color: #fff; margin-bottom: 22px; letter-spacing: -.01em; }
+  .mv-block small { font-size: 13.5px; color: var(--on-navy-dim); line-height: 2; display: block; }
 
   /* VALUE */
-  .value { background: var(--light); }
-  .value-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
-    margin-top: 56px;
+  .v-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 64px; }
+  .v-card { background: #fff; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; }
+  .v-img { background: var(--tint); height: 200px; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .v-logo { width: 100%; height: 100%; object-fit: contain; transform: scale(var(--vimg-scale, 1)); transform-origin: center; }
+  .v-body { padding: 30px 32px 34px; border-top: 2px solid var(--navy); }
+  .v-body h3 { font-size: 21px; font-weight: 700; color: var(--navy); margin-bottom: 6px; letter-spacing: -.01em; }
+  .v-body h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 14px; color: var(--ink); }
+  .v-body p { font-size: 13.5px; color: var(--muted); line-height: 1.95; }
+
+  /* PRODUCT */
+  .p-card { background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 26px; }
+  .p-card:first-of-type { margin-top: 60px; }
+  .p-text h3 { font-size: 28px; font-weight: 700; color: var(--navy); margin-bottom: 14px; letter-spacing: -.02em; }
+  .p-text > p { font-size: 14px; color: var(--muted); line-height: 1.95; margin-bottom: 22px; }
+  .feat { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+  .feat li { font-size: 13px; line-height: 1.6; display: flex; align-items: flex-start; gap: 11px; color: var(--ink); }
+  .feat li::before { content: '—'; color: var(--navy); font-weight: 700; flex: none; }
+  .p-links { display: flex; gap: 12px; margin-top: 26px; }
+  .p-links a {
+    font-family: 'Noto Sans Mono', monospace; font-size: 12px; letter-spacing: .03em; font-weight: 500;
+    padding: 9px 20px; border: 1px solid var(--navy); border-radius: 2px; color: var(--navy);
+    display: inline-flex; align-items: center; gap: 7px; transition: .2s;
   }
-  @media (max-width: 768px) { .value-grid { grid-template-columns: 1fr; } }
-  .value-card {
-    background: #fff; border: 1px solid var(--border);
-    border-radius: 12px; overflow: hidden;
-    display: grid; grid-template-rows: 250px 250px;
-    height: 500px;
+  .p-links a::after { content: '↗'; font-size: 12px; }
+  .p-links a:hover { background: var(--navy); color: #fff; }
+  .p-visual { background: var(--tint); border-radius: 4px; height: 240px; display: flex; align-items: center; justify-content: center; }
+  .p-visual img { width: 100%; height: 100%; object-fit: contain; }
+
+  /* SUBSIDIARIES */
+  .sub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 64px; }
+  .sub-card { background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 40px 40px 36px; }
+  .sub-head { display: flex; align-items: center; gap: 20px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+  .sub-cc {
+    font-family: 'Noto Sans Mono', monospace; font-size: 18px; font-weight: 500; color: var(--navy);
+    border: 1.5px solid var(--navy); border-radius: 3px; padding: 8px 12px; line-height: 1; flex: none; letter-spacing: .04em;
   }
-  .value-card-img-wrap {
-    overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
-    padding: 24px;
-  }
-  .value-card-img {
-    width: 100%; height: 100%;
-    object-fit: contain; display: block;
-    transform: scale(var(--vimg-scale, 1));
-    transform-origin: center;
-  }
-  .value-card-body {
-    padding: 32px;
-    border-top: 3px solid var(--accent);
-    overflow: auto;
-  }
-  .value-card h3 {
-    font-size: 22px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.01em;
-  }
-  .value-card h4 {
-    font-size: 15px; font-weight: 700; margin-bottom: 16px; color: var(--black);
-  }
-  .value-card p { font-size: 14px; color: var(--gray); line-height: 1.8; }
+  .sub-name { font-size: 19px; font-weight: 700; color: var(--navy); letter-spacing: -.01em; }
+  .sub-name-ja { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .sub-rows { display: flex; flex-direction: column; margin-top: 8px; }
+  .sub-row { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .sub-row:last-child { border-bottom: none; }
+  .sub-k { font-family: 'Noto Sans Mono', monospace; font-size: 11px; letter-spacing: .04em; color: var(--muted); text-transform: uppercase; padding-top: 2px; }
+  .sub-v { color: var(--ink); line-height: 1.7; }
 
   /* CONTACT */
-  .contact { text-align: center; background: #fff; }
-  .contact .section-title { margin-bottom: 12px; }
-  .contact .section-sub { max-width: 560px; margin: 0 auto 24px; }
-  .contact-emails {
-    display: inline-flex; flex-direction: column; gap: 16px;
-    text-align: left;
-  }
-  .contact-email-row { display: flex; align-items: center; gap: 16px; }
-  .contact-email-label { font-size: 13px; font-weight: 600; min-width: 100px; }
-  .contact-email-addr {
-    font-size: 15px; color: var(--gray);
-    font-family: 'Courier New', monospace; letter-spacing: 0.02em;
-  }
+  .contact-emails { display: flex; flex-direction: column; gap: 4px; margin-top: 56px; max-width: 640px; }
+  .c-row { display: grid; grid-template-columns: 180px 1fr; gap: 20px; align-items: center; padding: 22px 0; border-top: 1px solid rgba(255,255,255,.18); }
+  .c-row:last-child { border-bottom: 1px solid rgba(255,255,255,.18); }
+  .c-label { font-family: 'Noto Sans Mono', monospace; font-size: 12px; letter-spacing: .08em; color: var(--tint-nv); text-transform: uppercase; }
+  .c-addr { font-family: 'Noto Sans Mono', monospace; font-size: 15px; color: #fff; letter-spacing: .02em; }
 
   /* FOOTER */
-  footer {
-    padding: 40px 48px;
-    border-top: 1px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 12px; color: var(--gray);
-    flex-wrap: wrap; gap: 12px;
-  }
+  footer { background: var(--navy-900); color: var(--on-navy-dim); padding: 44px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-family: 'Noto Sans Mono', monospace; font-size: 11.5px; letter-spacing: .03em; }
+  footer a { color: #fff; }
+  footer a:hover { color: var(--tint-nv); }
+  footer .f-right { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    .lang-switcher { gap: 3px; }
-    .about-grid, .sub-grid, .product-card { grid-template-columns: 1fr; }
+  @media (max-width: 860px) {
+    nav { padding: 16px 22px; }
+    nav.scrolled { padding: 12px 22px; }
+    nav .nav-links { display: none; }
+    .hero { min-height: 76vh; }
+    .hero-left { padding: 120px 24px 64px; }
+    .hero-scrim { background: linear-gradient(125deg, rgba(12,30,62,.9) 0%, rgba(12,30,62,.72) 100%); }
+    .hero-meta { flex-wrap: wrap; gap: 24px; }
+    section.block { padding: 80px 24px; }
+    .about-2col, .mv-grid, .v-grid, .p-card, .sub-grid { grid-template-columns: 1fr; }
+    .about-2col { gap: 48px; }
+    .mv-grid { gap: 44px; }
+    .p-card { gap: 32px; padding: 32px; }
+    .c-row { grid-template-columns: 1fr; gap: 6px; }
     footer { flex-direction: column; text-align: center; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
+<nav id="nav">
   <div class="logo">Studist<span>.</span> Global</div>
   <div class="nav-right">
     <div class="nav-links">
@@ -324,40 +237,50 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="top">
-  <img src="../cover.webp" alt="Studist Global" class="hero-cover" width="1800" height="1014">
-  <div class="hero-content">
-    <h1>Expanding<br><em>Lean Operation</em><br>Globally.</h1>
+<header class="hero" id="top">
+  <img class="hero-bg" src="../cover.webp" alt="Studist Global" width="1800" height="1014">
+  <div class="hero-scrim"></div>
+  <div class="hero-left">
+    <p class="kicker">Studist Global — Thailand / Vietnam</p>
+    <h1>Expanding<br><span>Lean Operation</span><br>Globally.</h1>
+    <p class="hero-sub">Transforming the way we work — and the future — through operations. Business reform rooted in the front lines of Thailand and Vietnam.</p>
+    <div class="hero-meta">
+      <div>EST. THAILAND<b>2018</b></div>
+      <div>SUBSIDIARIES<b>TH / VN</b></div>
+      <div>LANGUAGES<b>JA·EN·TH·VI</b></div>
+    </div>
   </div>
-</section>
+</header>
 
 <!-- ABOUT -->
-<section class="about" id="about">
-  <div class="section-inner">
-    <div class="section-label">About / About Us</div>
-    <h2 class="section-title">Striving to Be Your "Productivity Partner"</h2>
-    <p class="section-sub">We started from "communication" and have been driving business transformation for companies. Now, centered around the concept of "Lean Operation," we propose improvements from a broader perspective. Freed from inefficient work, people can rediscover the real joy of their jobs. As more such workplaces emerge, the intellectual vitality of society as a whole will grow. That is the future we strive for.</p>
-    <div class="about-grid">
-      <div class="about-text">
+<section class="block about" id="about">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">01</span> About</div>
+    <h2 class="s-title">Striving to Be Your "Productivity Partner"</h2>
+    <p class="lead">We started from "communication" and have been driving business transformation for companies. Now, centered around the concept of "Lean Operation," we propose improvements from a broader perspective. Freed from inefficient work, people can rediscover the real joy of their jobs. As more such workplaces emerge, the intellectual vitality of society as a whole will grow. That is the future we strive for.</p>
+    <div class="about-2col">
+      <div>
         <h3>From Japan to ASEAN.</h3>
         <p>Focusing on ASEAN's high labor mobility, multilingual environment, and need for paperless solutions, we established local subsidiaries in Thailand and Vietnam, providing locally rooted support.</p>
       </div>
-      <div class="about-stats">
-        <div class="stat">
-          <div class="stat-num">8</div>
-          <div class="stat-label">Years of overseas presence<br>Thailand since 2018</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">4</div>
-          <div class="stat-label">Supported languages<br>JA / EN / TH / VI</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">2,300+</div>
-          <div class="stat-label">Companies introduced<br>Customers</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">100+</div>
-          <div class="stat-label">Overseas companies introduced</div>
+      <div class="stats">
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-num">8</div>
+            <div class="stat-label">Years overseas<br>THAILAND, 2018–</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Supported languages<br>JA / EN / TH / VI</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">2,300<span class="u">+</span></div>
+            <div class="stat-label">Companies introduced<br>CUSTOMERS</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100<span class="u">+</span></div>
+            <div class="stat-label">Overseas companies<br>OVERSEAS</div>
+          </div>
         </div>
       </div>
     </div>
@@ -365,20 +288,20 @@
 </section>
 
 <!-- MISSION / VISION -->
-<section class="mv">
-  <div class="section-inner">
-    <div class="section-label">Mission &amp; Vision</div>
-    <h2 class="section-title">Our Mission and Vision</h2>
+<section class="block dark">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">02</span> Mission &amp; Vision</div>
+    <h2 class="s-title">Our Mission and Vision</h2>
     <div class="mv-grid">
       <div class="mv-block">
-        <h3>Mission</h3>
-        <p class="mv-subtitle">Our mission</p>
+        <div class="mv-label">Mission</div>
+        <p class="mv-sub">Our mission</p>
         <p class="mv-catch">Transforming the Future of Work Through Operations</p>
         <small>Japan achieved remarkable economic growth during the Showa era, often referred to as the "Asian Miracle," driven by its population bonus.<br>The corporate rules, business processes, procedures, and systems developed during that time functioned effectively within the social environment of the era.<br>However, as the population bonus era has come to an end and labor shortages intensify, we must now update the systems of society that were built on the assumption of continuous population growth.<br>At Studist, we focus on operations—the operating system of organizational management.<br>By promoting visualization, standardization, simplification, and systemization (thorough implementation) of business activities, we work to modernize operations.<br>Our mission is to transform the way people work, enabling both companies and their employees to grow together, and to help create a society where innovation continues to thrive.</small>
       </div>
       <div class="mv-block">
-        <h3>Vision</h3>
-        <p class="mv-subtitle">The future we aim for</p>
+        <div class="mv-label">Vision</div>
+        <p class="mv-sub">The future we aim for</p>
         <p class="mv-catch">To build a society that is filled with knowledge power driven by the true understanding and creative thinking.</p>
         <small>If communication became simpler, both the sender and receiver of the message will no longer have to waste time on unnecessary things but can spend more time on creative things instead.<br>This will allow the society to be built with knowledge power-driven by the true understanding and creative thinking. And that is truly Studist's vision.</small>
       </div>
@@ -387,38 +310,38 @@
 </section>
 
 <!-- VALUE -->
-<section class="value" id="value">
-  <div class="section-inner">
-    <div class="section-label">Value / Core Values</div>
-    <h2 class="section-title">Our Core Values</h2>
-    <div class="value-grid">
-      <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../01_withthecustomer.png" alt="With the customer" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.40"></div>
-        <div class="value-card-body">
+<section class="block" style="background:var(--tint);" id="value">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">03</span> Value</div>
+    <h2 class="s-title">Our Core Values</h2>
+    <div class="v-grid">
+      <div class="v-card">
+        <div class="v-img"><img src="../01_withthecustomer.png" alt="With the customer" class="v-logo" loading="lazy" width="1889" height="1889" style="--vimg-scale:2.10"></div>
+        <div class="v-body">
           <h3>With the customer</h3>
           <h4>Dive into your customers</h4>
           <p>Actively engage with customers so we can succeed together. Dive in — because sometimes you only see what's possible once you take that step forward.</p>
         </div>
       </div>
-      <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../02_tryfirst.png" alt="Try first" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.12"></div>
-        <div class="value-card-body">
+      <div class="v-card">
+        <div class="v-img"><img src="../02_tryfirst.png" alt="Try first" class="v-logo" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.68"></div>
+        <div class="v-body">
           <h3>Try first</h3>
           <h4>If you're unsure, just try</h4>
           <p>Rather than being paralyzed by overthinking, take a step forward first. Even if it doesn't work out the first time, you can learn from it — so just give it a try.</p>
         </div>
       </div>
-      <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../03_beyondteam.png" alt="Beyond team" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.13"></div>
-        <div class="value-card-body">
+      <div class="v-card">
+        <div class="v-img"><img src="../03_beyondteam.png" alt="Beyond team" class="v-logo" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.70"></div>
+        <div class="v-body">
           <h3>Beyond team</h3>
           <h4>Go beyond your team</h4>
           <p>Collaborate across organizational boundaries as All Studist. Go beyond your team to create greater results and new value.</p>
         </div>
       </div>
-      <div class="value-card">
-        <div class="value-card-img-wrap"><img src="../04_bestudyist.png" alt="Be Study + ist" class="value-card-img" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.00"></div>
-        <div class="value-card-body">
+      <div class="v-card">
+        <div class="v-img"><img src="../04_bestudyist.png" alt="Be Study + ist" class="v-logo" loading="lazy" width="1889" height="1889" style="--vimg-scale:1.50"></div>
+        <div class="v-body">
           <h3>Be Study + ist</h3>
           <h4>Keep learning and growing</h4>
           <p>To be a professional, each of us continues to learn as a "Study + ist." Let's inspire each other and keep growing.</p>
@@ -429,36 +352,34 @@
 </section>
 
 <!-- PRODUCT -->
-<section class="product" id="product">
-  <div class="section-inner">
-    <div class="section-label">Product / Products</div>
-    <h2 class="section-title">Teachme <span class="title-ja">Series</span></h2>
-    <p class="section-sub">Creating engines of growth capital for the future, for every organization on the front lines</p>
-    <div class="product-card">
-      <div>
+<section class="block" id="product">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">04</span> Product</div>
+    <h2 class="s-title">Teachme Series</h2>
+    <p class="s-sub">Creating engines of growth capital for the future, for every organization on the front lines</p>
+    <div class="p-card">
+      <div class="p-text">
         <h3>Teachme Biz</h3>
         <p>A business manual creation and sharing platform used in manufacturing, logistics, retail, food service, and other front-line operations. With multilingual support and smartphone-based use, it enables consistent procedures and quality at overseas locations.</p>
-        <ul class="feature-list">
+        <ul class="feat">
           <li>Easily create SOPs anyone can understand with video and image-based content</li>
           <li>Multilingual support (Japanese, English, Thai, Vietnamese, etc.) for multicultural workplaces</li>
           <li>Access anytime from smartphones, streamlining on-site training</li>
           <li>Visualize training status with viewing logs, comprehension tests, and reports</li>
           <li>Local language support in Thailand &amp; Vietnam with on-site implementation assistance</li>
         </ul>
-        <div class="product-links">
-          <a href="https://biz.teachme.jp/" target="_blank" rel="noopener noreferrer" class="product-link">Japan Site</a>
-          <a href="https://teachme-biz.com/ja/" target="_blank" rel="noopener noreferrer" class="product-link">Global Site</a>
+        <div class="p-links">
+          <a href="https://biz.teachme.jp/" target="_blank" rel="noopener noreferrer">Japan Site</a>
+          <a href="https://teachme-biz.com/ja/" target="_blank" rel="noopener noreferrer">Global Site</a>
         </div>
       </div>
-      <div class="product-visual">
-        <img src="../teachmebiz.webp" alt="Teachme Biz" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
-      </div>
+      <div class="p-visual"><img src="../teachmebiz.webp" alt="Teachme Biz" loading="lazy"></div>
     </div>
-    <div class="product-card">
-      <div>
+    <div class="p-card">
+      <div class="p-text">
         <h3>Teachme Process</h3>
         <p>A product that turns complex "business processes" into an easy-to-understand "map" through conversational AI. It visualizes the big picture that sits above individual manuals (procedures), and with three values—draw it, connect it, improve it—supports the standardization and improvement of work that has become person-dependent.</p>
-        <ul class="feature-list">
+        <ul class="feat">
           <li>Draw the full picture of any business process just by feeding documents or chatting with AI</li>
           <li>Switch between flowchart, list, and swimlane views with a single click</li>
           <li>Link each step to Teachme Biz manuals, standard times, departments, and workloads</li>
@@ -466,131 +387,93 @@
           <li>Auto-generate an efficiency-improvement report with direction, priorities, and concrete actions</li>
         </ul>
       </div>
-      <div class="product-visual">
-        <img src="../teachmeprocess.png" alt="Teachme Process" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
-      </div>
+      <div class="p-visual"><img src="../teachmeprocess.png" alt="Teachme Process" loading="lazy"></div>
     </div>
-    <div class="product-card">
-      <div>
+    <div class="p-card">
+      <div class="p-text">
         <h3>Teachme Communication</h3>
         <p>A product that turns everyday communication into an asset that helps the front line, beyond language barriers. AI real-time translation removes the language wall so that knowledge sharing and daily information flow never stall—even in multinational, multi-generational workplaces.</p>
-        <ul class="feature-list">
+        <ul class="feat">
           <li>Connect multilingual workplaces seamlessly with AI real-time translation chat</li>
           <li>Daily reports that AI auto-formats from what you say (with translation and summary)</li>
           <li>Resolve person-dependency with Know Who, answering "Who knows this machine well?"</li>
           <li>Turn veterans' know-how and troubleshooting into assets to maximize output with fewer people</li>
         </ul>
       </div>
-      <div class="product-visual">
-        <img src="../teachmecommunication.png" alt="Teachme Communication" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
-      </div>
+      <div class="p-visual"><img src="../teachmecommunication.png" alt="Teachme Communication" loading="lazy"></div>
     </div>
-    <div class="product-card">
-      <div>
+    <div class="p-card">
+      <div class="p-text">
         <h3>Teachme MySkill</h3>
         <p>A talent "growth" platform that encourages self-driven skill development. By "gamifying" skill-up, it creates a state where the front line keeps learning on its own—without pressure from headquarters or supervisors—supporting faster onboarding of new and foreign staff and higher retention.</p>
-        <ul class="feature-list">
+        <ul class="feat">
           <li>Promote skill acquisition with My Skill visualization, My Quests, and EXP / rank-ups</li>
           <li>View proficiency at a glance with skill maps by organization and store (CSV export)</li>
           <li>Manage national and external qualifications such as food-hygiene supervisor in one place</li>
           <li>AI analyzes proficiency and personally suggests the next skill to learn</li>
         </ul>
       </div>
-      <div class="product-visual">
-        <img src="../teachmemyskill.png" alt="Teachme MySkill" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
-      </div>
+      <div class="p-visual"><img src="../teachmemyskill.png" alt="Teachme MySkill" loading="lazy"></div>
     </div>
   </div>
 </section>
 
 <!-- SUBSIDIARIES -->
-<section id="subsidiaries">
-  <div class="section-inner">
-    <div class="section-label">Subsidiaries / Local Offices</div>
-    <h2 class="section-title">ASEAN <span class="title-ja">Locations</span></h2>
-    <p class="section-sub">We support business standardization and human resource development for Japanese and local companies in Thailand and Vietnam.</p>
+<section class="block" style="background:var(--tint);" id="subsidiaries">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">05</span> Subsidiaries</div>
+    <h2 class="s-title">ASEAN Locations</h2>
+    <p class="s-sub">We support business standardization and human resource development for Japanese and local companies in Thailand and Vietnam.</p>
     <div class="sub-grid">
-
-      <!-- Thailand -->
       <div class="sub-card">
-        <div class="sub-flag">&#127481;&#127469;</div>
-        <div class="sub-name">Studist (Thailand) Co., Ltd.</div>
-        <div class="sub-name-ja">Studist (Thailand)</div>
-        <div class="sub-divider"></div>
-        <div class="sub-info">
-          <div class="sub-info-row">
-            <span class="sub-info-label">Founded</span>
-            <span class="sub-info-val">August 2018</span>
-          </div>
-          <div class="sub-info-row">
-            <span class="sub-info-label">CEO</span>
-            <span class="sub-info-val">Yusuke Mameda</span>
-          </div>
-          <div class="sub-info-row">
-            <span class="sub-info-label">Address</span>
-            <span class="sub-info-val">952 Ramaland Building 13 Fl, Rama IV Rd, Suriyawongse, Bang Rak, Bangkok 10500</span>
-          </div>
-          <div class="sub-info-row">
-            <span class="sub-info-label">Business</span>
-            <span class="sub-info-val">Sales &amp; Customer Success of Teachme Series</span>
-          </div>
-          <div class="sub-info-row">
-            <span class="sub-info-label">Market</span>
-            <span class="sub-info-val">Thailand &amp; Overseas</span>
+        <div class="sub-head">
+          <span class="sub-cc">TH</span>
+          <div>
+            <div class="sub-name">Studist (Thailand) Co., Ltd.</div>
+            <div class="sub-name-ja">Studist (Thailand)</div>
           </div>
         </div>
-        <span class="sub-tag">Thailand</span>
+        <div class="sub-rows">
+          <div class="sub-row"><span class="sub-k">Founded</span><span class="sub-v">August 2018</span></div>
+          <div class="sub-row"><span class="sub-k">CEO</span><span class="sub-v">Yusuke Mameda</span></div>
+          <div class="sub-row"><span class="sub-k">Address</span><span class="sub-v">952 Ramaland Building 13 Fl, Rama IV Rd, Suriyawongse, Bang Rak, Bangkok 10500</span></div>
+          <div class="sub-row"><span class="sub-k">Business</span><span class="sub-v">Sales &amp; Customer Success of Teachme Series</span></div>
+          <div class="sub-row"><span class="sub-k">Market</span><span class="sub-v">Thailand &amp; Overseas</span></div>
+        </div>
       </div>
-
-      <!-- Vietnam -->
       <div class="sub-card">
-        <div class="sub-flag">&#127483;&#127475;</div>
-        <div class="sub-name">Studist (Vietnam) Co., Ltd.</div>
-        <div class="sub-name-ja">Studist (Vietnam)</div>
-        <div class="sub-divider"></div>
-        <div class="sub-info">
-          <div class="sub-info-row">
-            <span class="sub-info-label">Founded</span>
-            <span class="sub-info-val">December 2025</span>
-          </div>
-          <div class="sub-info-row">
-            <span class="sub-info-label">CEO</span>
-            <span class="sub-info-val">Yasuaki Tsukahara</span>
-          </div>
-          <div class="sub-info-row">
-            <span class="sub-info-label">Address</span>
-            <span class="sub-info-val">1st Floor, Lancaster Building, 22 – 22bis Le Thanh Ton Street, Saigon Ward, Ho Chi Minh City, Vietnam</span>
-          </div>
-          <div class="sub-info-row">
-            <span class="sub-info-label">Business</span>
-            <span class="sub-info-val">Sales &amp; Customer Success of Teachme Series</span>
-          </div>
-          <div class="sub-info-row">
-            <span class="sub-info-label">Market</span>
-            <span class="sub-info-val">All of Vietnam</span>
+        <div class="sub-head">
+          <span class="sub-cc">VN</span>
+          <div>
+            <div class="sub-name">Studist (Vietnam) Co., Ltd.</div>
+            <div class="sub-name-ja">Studist (Vietnam)</div>
           </div>
         </div>
-        <span class="sub-tag">Vietnam</span>
+        <div class="sub-rows">
+          <div class="sub-row"><span class="sub-k">Founded</span><span class="sub-v">December 2025</span></div>
+          <div class="sub-row"><span class="sub-k">CEO</span><span class="sub-v">Yasuaki Tsukahara</span></div>
+          <div class="sub-row"><span class="sub-k">Address</span><span class="sub-v">1st Floor, Lancaster Building, 22 – 22bis Le Thanh Ton Street, Saigon Ward, Ho Chi Minh City, Vietnam</span></div>
+          <div class="sub-row"><span class="sub-k">Business</span><span class="sub-v">Sales &amp; Customer Success of Teachme Series</span></div>
+          <div class="sub-row"><span class="sub-k">Market</span><span class="sub-v">All of Vietnam</span></div>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="section-inner">
-    <div class="section-label">Contact / Inquiries</div>
-    <h2 class="section-title">Feel Free to Reach Out</h2>
-    <p class="section-sub">For Teachme Biz implementation, demo requests, partnership inquiries, and more, please contact your nearest office.</p>
+<section class="block dark" id="contact">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">06</span> Contact</div>
+    <p class="s-sub">For Teachme Biz implementation, demo requests, partnership inquiries, and more, please contact your nearest office.</p>
     <div class="contact-emails">
-      <div class="contact-email-row">
-        <span class="contact-email-label">🇹🇭 Thailand</span>
-        <span class="contact-email-addr">contact-th[@]studist.co.th</span>
+      <div class="c-row">
+        <span class="c-label">TH — Thailand</span>
+        <span class="c-addr">contact-th[@]studist.co.th</span>
       </div>
-      <div class="contact-email-row">
-        <span class="contact-email-label">🇻🇳 Vietnam</span>
-        <span class="contact-email-addr">contact-vn[@]studist.jp</span>
+      <div class="c-row">
+        <span class="c-label">VN — Vietnam</span>
+        <span class="c-addr">contact-vn[@]studist.jp</span>
       </div>
     </div>
   </div>
@@ -599,11 +482,17 @@
 <!-- FOOTER -->
 <footer>
   <div>&copy; 2026 Studist Corporation. All rights reserved.</div>
-  <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
-    <a href="../careers/" style="color:var(--accent);font-weight:600;">Careers</a>
+  <div class="f-right">
+    <a href="../careers/">Careers</a>
     <span>Studist (Thailand) Co., Ltd. &nbsp;|&nbsp; Studist (Vietnam) Co., Ltd.</span>
   </div>
 </footer>
 
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 64);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
 </body>
 </html>
